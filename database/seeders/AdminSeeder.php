@@ -20,6 +20,7 @@ class AdminSeeder extends Seeder
         DB::table('users')->insert([
            "username" => "Admin IdPlay",
            "noHP" => "0812345",
+           "role" => "admin",
            "alamat" => "Malang",
            "email" => "admin@gmail.com",
            "password" => bcrypt("admin123"),
