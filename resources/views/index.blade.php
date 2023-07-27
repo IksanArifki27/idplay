@@ -1,0 +1,227 @@
+@extends('layouts.main')
+@section('content')
+
+
+
+    {{-- VIDEO --}}
+    <div class="banner">
+        <div class="owl-five owl-carousel owl-theme">
+            <div class="item-video">
+                <iframe width="100%" height="450" src="https://www.youtube.com/embed/ENVW3uZ3a-4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+            </div>
+            <div class="item-video">
+                <iframe width="100%" height="450" src="https://www.youtube.com/embed/0bfk90rWV9U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="item-video">
+                <iframe width="100%" height="450" src="https://www.youtube.com/embed/ktvTqknDobU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="item-video">
+                <iframe width="100%" height="450" src="https://www.youtube.com/embed/ENVW3uZ3a-4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+            </div>
+            <div class="item-video">
+                <iframe width="100%" height="450" src="https://www.youtube.com/embed/0bfk90rWV9U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="item-video">
+                <iframe width="100%" height="450" src="https://www.youtube.com/embed/ktvTqknDobU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+      </div>
+    </div> 
+
+    <div id="page" class="site" itemscope itemtype="http://schema.org/LocalBusiness">
+    <div class="banner">
+        <div class="owl-five owl-carousel owl-theme">
+            <div class="item-video">
+                <iframe width="100%" height="450" src="https://www.youtube.com/embed/ENVW3uZ3a-4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+            </div>
+            <div class="item-video">
+                <iframe width="100%" height="450" src="https://www.youtube.com/embed/0bfk90rWV9U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="item-video">
+                <iframe width="100%" height="450" src="https://www.youtube.com/embed/ktvTqknDobU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="item-video">
+                <iframe width="100%" height="450" src="https://www.youtube.com/embed/ENVW3uZ3a-4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+            </div>
+            <div class="item-video">
+                <iframe width="100%" height="450" src="https://www.youtube.com/embed/0bfk90rWV9U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="item-video">
+                <iframe width="100%" height="450" src="https://www.youtube.com/embed/ktvTqknDobU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+      </div>
+    </div> 
+    <div class="banner">
+        <div class="owl-four owl-carousel" itemprop="image">
+            <img src="images/page-banner.png" alt="Image of Bannner">
+            <img src="images/page-banner2.png" alt="Image of Bannner">
+            <img src="images/page-banner3.png" alt="Image of Bannner">
+        </div>
+        <div class="container" itemprop="description">
+            <h1>---</h1>
+            <h3>....</h3>
+        </div>
+         <div id="owl-four-nav" class="owl-nav"></div>
+    </div>
+    
+    <!-- Banner Close -->
+    <div class="page-heading">
+        <div class="container">
+            <h2>HOME PACKAGES</h2>
+        </div>
+    </div>
+    <!-- Popular courses End -->
+    <div class="learn-courses">
+        <div class="container">
+            <div class="courses">
+                <div class="owl-one owl-carousel">
+                    <div class="box-wrap" itemprop="event" itemscope itemtype=" http://schema.org/Course">
+                        <div class="img-wrap" itemprop="image"><img src="images/course-pic.png" alt="courses picture"></div>
+                            <a href="/products" class="learn-desining-banner" itemprop="name">HOME</a>
+                        <div class="box-body" itemprop="description">
+                            <p><b>Menghadirkan layanan internet dan hiburan terbaik di rumah Anda.
+                               Kecepatan Up to 10 Mbps.</b>
+                            </p>
+                            <section itemprop="time">
+                               <!-- <p><span>Device:</span> 7 Devices</p>
+                                <p><span>Speed:</span> 20 Mbps</p>
+                                <p><span>Rp.</span> 400.000</p> -->
+                            </section>
+                        </div>
+                    </div>
+
+                    <div class="box-wrap" itemprop="event" itemscope itemtype=" http://schema.org/Course">
+                        <div class="img-wrap"  itemprop="image"><img src="images/course-pic.png" alt="courses picture"></div>
+                            <a href="/products" class="learn-desining-banner" itemprop="name">BUSINESS</a>
+                        <div class="box-body" itemprop="description">
+                            <p><b>Memberikan layanan terbaik untuk perusahaan dan perkantoran SOHO 
+                                (Smart Office & Home Office). Kecepatan Up to 100 Mbps.</b>
+                            </p>
+                            <section itemprop="time">
+                                <!--<p><span>Device:</span> 10 Devices</p>
+                                <p><span>Speed:</span> 20 Mbps</p>
+                                <p><span>Rp.</span> 500.000</p>-->
+                            </section>
+                        </div>
+                    </div>
+
+                    <div class="box-wrap" itemprop="event" itemscope itemtype=" http://schema.org/Course">
+                        <div class="img-wrap"  itemprop="image"><img src="images/course-pic.png" alt="courses picture"></div>
+                            <a href="/products" class="learn-desining-banner" itemprop="name">DEDICATED</a>
+                        <div class="box-body" itemprop="description">
+                            <p><b>Menghadirkan layanan terbaik dengan layanan dan kecepatan premium. 
+                                Kecepatan Up to 1-10 Gbps.</b>
+                            </p>
+                            <section itemprop="time">
+                                <!--<p><span>Device:</span> 3 Devices</p>
+                                <p><span>Speed:</span> 10 Mbps</p>
+                                <p><span>Rp.</span> 200.000</p>-->
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Learn courses End -->
+    <section class="whyUs-section">
+        <div class="container">
+            <div class="featured-points">
+                <ul>
+                    <li><i class="fas fa-book"></i> kecepatan yang berlipat</li>
+                    <li><i class="fas fa-money-check-alt"></i> harga murah kualitas tinggi</li>
+                    <li><i class="fas fa-chalkboard-teacher"></i> digunakan lebih dari 5 tahun</li>
+                    <li> <i class="fas fa-book"></i> lancar tanpa kendala</li>
+                </ul>
+            </div>
+            <div class="whyus-wrap">
+                <h1>why us?</h1>
+                <p itemprop="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, tempore fugiat. Praesentium aperiam, libero neque quas in rem harum ipsum quasi iure obcaecati, alias nemo sint! Aperiam nulla quas doloremque.</p>
+
+                <a href="#" class="read-more-btn">read more</a>
+            </div>
+        </div>
+    </section>
+    <!-- Closed WhyUs section -->
+    <section class="page-heading">
+        <div class="container">
+            <h2>gallery</h2>
+        </div>
+    </section>
+    <section class="gallery-images-section" itemprop="image" itemscope itemtype=" http://schema.org/ImageGallery">
+        <div class="gallery-img-wrap">
+            <a href="images/gallery-img1.jpg" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">
+                <img src="images/gallery-img1.jpg" alt="gallery-images">
+            </a>
+        </div>
+        <div class="gallery-img-wrap">
+            <a href="images/gallery-img2.jpg" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">
+                <img src="images/gallery-img2.jpg" alt="gallery-images">
+            </a>
+        </div>
+        <div class="gallery-img-wrap">
+            <a href="images/gallery-img3.jpg" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">
+                <img src="images/gallery-img3.jpg" alt="gallery-images">
+            </a>
+        </div>
+        <div class="gallery-img-wrap">
+            <a href="images/gallery-img4.jpg" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">
+                <img src="images/gallery-img4.jpg" alt="gallery-images">
+            </a>
+        </div>
+        </div>
+    </section>
+    <!-- End of gallery Images -->
+    <section class="page-heading">
+        <div class="container">
+            <h2>latest news</h2>
+        </div>
+    </section>
+    <section class="latest-news">
+        <div class="container" itemprop="event" itemscope itemtype=" http://schema.org/Event">
+            <div class="owl-two owl-carousel">
+                <div class="news-wrap" itemprop="event">
+                    <div class="news-img-wrap" itemprop="image">
+                        <img src="images/latest-new-img.jpg" alt="Latest News Images">
+                    </div>
+                    <div class="news-detail" itemprop="description">
+                        <a href=""><h1>Langganan 1 Bulan + Bonus</h1></a>
+                        <h2 itemprop="startDate">By Admin | 15 Juli 2023</h2>
+
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod laborum eius tenetur saepe odit aliquam a reprehenderit aliquid.</p>
+                    </div>
+                </div>
+
+                <div class="news-wrap" itemprop="event">
+                    <div class="news-img-wrap" itemprop="image">
+                        <img src="images/latest-new-img.jpg" alt="Latest News Images">
+                    </div>
+                    <div class="news-detail" itemprop="description">
+                        <a href=""><h1>Dapatkan koneksi otomatis di seluruh Indonesia</h1></a>
+                        <h2 itemprop="startDate">By Admin | 20 Juli 2023</h2>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore quisquam sunt voluptas et aliquam ducimus non?</p>
+                    </div>
+                </div>
+
+                <div class="news-wrap" itemprop="event">
+                    <div class="news-img-wrap" itemprop="image">
+                        <img src="images/latest-new-img.jpg" alt="Latest News Images">
+                    </div>
+                    <div class="news-detail" itemprop="description">
+                        <a href=""><h1>Orientation Programme for new Students.</h1></a>
+                        <h2 itemprop="startDate">By Admin | 20 Dec. 2018</h2>
+
+                        <p>Orientation Programme for new sffs Students. Orientatin Programmes for new Students.. Orientatin Programmes for new Students</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Latest News CLosed -->
+</div>
+
+@endsection
