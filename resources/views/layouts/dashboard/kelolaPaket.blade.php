@@ -57,12 +57,18 @@
                     
                     <div class="card shadow mb-4">
                         <div class="card-header py-3 d-flex">
-                            <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#ProdukModal">Tambah Produk</a>
+                            <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#TambahProdukModal">Tambah Produk</a>
                             {{-- <h6 class="m-0 font-weight-bold text-primary text-center">Daftar Data Paket Produk</h6> --}}
                             
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
+                                 @if ($message = Session::get('success'))
+                            <div class="alert alert-success alert-block">
+                                <button type="button" class="close" data-dismiss="alert">×</button>	
+                                <strong>{{ $message }}</strong>
+                             </div>     
+                            @endif
                                 <table class="table table-bordered text-center" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
@@ -77,9 +83,12 @@
                                         </tr>
                                     </thead>                                 
                                     <tbody>
+                                        @php
+                                            $no = 1;
+                                        @endphp
                                         @foreach ($datas as $data)
                                         <tr>
-                                            <td>1</td>
+                                            <td>{{$no++}}</td>
                                             <td>{{$data->nama}}</td>
                                             <td>{{$data->kecepatan}} Mbps</td>
                                             <td>{{$data->device}} Device</td>
@@ -87,8 +96,9 @@
                                             <td>{{$data->deskripsi}}</td>
                                             <td>{{$data->kategori}}</td>
                                             <td>
-                                                <a href="#" class="btn btn-primary">Edit</a>
-                                                <a href="#" class="btn btn-danger">Hapus</a>
+                                                {{-- <a href="/KelolaPaket/{{$data->id}}" class="btn btn-primary" data-toggle="modal" data-target="#UpdateProdukModal">Update</a> --}}
+                                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#UpdateProdukModal{{$data->id}}" >update</button>
+                                                <a href="/hapusPaket/{{$data->id}}" class="btn btn-danger">Hapus</a>
                                             </td>
                                         </tr>
                                         @endforeach
@@ -104,8 +114,8 @@
                 
                 <!-- /.container-fluid -->
 
-                {{-- test modal --}}
-                <div class="modal fade" id="ProdukModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                {{-- tambah produk modal --}}
+                <div class="modal fade" id="TambahProdukModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
             <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -140,9 +150,8 @@
                                                 placeholder="Masukan harga Paket ..." name="biaya">
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" class="form-control form-control"
-                                                id="exampleInputEmail" aria-describedby="emailHelp"
-                                                placeholder="Masukan Deskripsi ..." name="deskripsi">
+                                            <textarea name="deskripsi"  class="form-control form-control" cols="30" rows="10" placeholder="Masukan Deskripsi"></textarea>
+                                            
                                         </div>
                                         <select class="form-select" name="kategori" aria-label="Default select example">
                                             <option selected disabled>Pilih Kategori</option>
@@ -166,7 +175,73 @@
             </div>
         </div>
     </div>
-    {{-- modal --}}
+    {{-- end tambah modal --}}
+
+    {{-- update produk modal --}}
+    @foreach ($datas as $item)
+     <div class="modal fade" id="UpdateProdukModal{{$item->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Update Produk Paket</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+
+                            <div class="modal-body">
+                            <form class="user" method="POST" action="/KelolaPaket/{{$item->id}}">
+                                        @csrf
+                                        <div class="form-group">
+                                            <input type="text" class="form-control form-control"
+                                                id="exampleInputEmail" aria-describedby="emailHelp"
+                                                placeholder="Masukan Nama Paket Produk ..." name="nama" value="{{$item->nama}}">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="number" class="form-control form-control"
+                                                id="exampleInputEmail" aria-describedby="emailHelp"
+                                                placeholder="Masukan Kecepatan ..." name="kecepatan" value="{{$item->kecepatan}}">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="number" class="form-control form-control"
+                                                id="exampleInputEmail" aria-describedby="emailHelp"
+                                                placeholder="Masukan Jumlah Device ..." name="device" value="{{$item->device}}">
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <input type="number" class="form-control form-control"
+                                                id="exampleInputEmail" aria-describedby="emailHelp"
+                                                placeholder="Masukan harga Paket ..." name="biaya" value="{{$item->biaya}}">
+                                        </div>
+                                        <div class="form-group">
+                                             <textarea name="deskripsi"  class="form-control form-control" cols="30" rows="10" placeholder="Masukan Deskripsi" >{{$item->deskripsi}}</textarea>
+                                        </div>
+                                        <select class="form-select" name="kategori" aria-label="Default select example" value="{{$item->kategori}}">
+                                            <option selected disabled>{{$item->kategori}}</option>
+                                            <option value="business">Business</option>
+                                            <option value="design">Design</option>
+                                            <option value="development">Development</option>
+                                            <option value="seo">Seo</option>
+                                            <option value="marketing">Marketing</option>
+                                        </select>
+                                        <hr>
+                                      
+                                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                                        <button class="btn btn-primary" type="submit" >Update</button>
+                                        
+                                    </form>
+                </div>
+                {{-- <div class="modal-footer">
+                    <button class="btn btn-primary" type="submit" data-dismiss="modal">Tambah</button>
+                    
+                </div> --}}
+            </div>
+        </div>
+    </div>
+    @endforeach
+    {{-- end update produk modal --}}
+
 
             </div>
             <!-- End of Main Content -->

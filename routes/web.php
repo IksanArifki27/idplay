@@ -28,13 +28,12 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
-Route::get('/products', function () {
-    return view('products');
-});
+// Route::get('/products', function () {
+//     return view('products');
+// });
+Route::get('/products',[PaketController::class,'paketProduk']);
 
-Route::get('/single-product', function () {
-    return view('product-single');
-});
+Route::get('/detail-product/{id}',[PaketController::class,'detailProduk']);
 
 Route::get('/info', function () {
     return view('info');
@@ -66,6 +65,8 @@ Route::get('/logout',[AuthController::class,'logout']);
 
 Route::get('/KelolaPaket',[PaketController::class,'kelolaPaket']);
 Route::post('/tambahPaket',[PaketController::class,'tambahPaket']);
+Route::post('/KelolaPaket/{id}',[PaketController::class,'updatePaket']);
+Route::get('/hapusPaket/{id}',[PaketController::class,'hapusPaket']);
 
 
 

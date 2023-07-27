@@ -13,12 +13,12 @@
                   <button class="button" data-filter=".marketing">marketing</button>
             </div>
 
-            <div class="grid" id="cGrid">
+            <div class="grid gap-2" id="cGrid" >
                 <div class="grid-item business" data-category="business">
                     <div class="img-wrap">
                         <img src="images/course-pic.png" alt="courses picture">
                     </div>
-                    <a href="/single-product" class="learn-desining-banner-course">Learn Web Designing >>></a>
+                    <a href="/single-product" class="learn-desining-banner-course">Contoh >>></a>
                     <div class="box-body">
                         <p>Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum</p>
                         <section>
@@ -29,21 +29,22 @@
                     </div>
                 </div>
 
+                @foreach ($datas as $item) 
                 <div class="grid-item business" data-category="business">
                     <div class="img-wrap">
                         <img src="images/course-pic.png" alt="courses picture">
                     </div>
-                    <a href="#" class="learn-desining-banner-course">Learn Web Designing >>></a>
+                    <a href="/detail-product/{{$item->id}}" class="learn-desining-banner-course">{{$item->nama}} >>></a>
                     <div class="box-body">
-                        <p>Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum</p>
+                        <p>{{$item->deskripsi}}</p>
                         <section>
-                            <p><span>Duration:</span> 4 Years</p>
-                            <p><span>Class Time:</span> 6am-12am / 11am-5pm</p>
-                            <p><span>Fee:</span> 4,00,000</p>
+                            <p><span>Speed : </span>{{$item->kecepatan}} Mbps </p>
+                            <p><span>Device : </span>{{$item->device}} Device</p>
+                            <p><span>Fee:</span> {{$item->biaya}} </p>
                         </section>
                     </div>
                 </div>
-
+                @endforeach
                 </div>
             </div>
         </div>

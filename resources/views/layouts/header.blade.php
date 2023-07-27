@@ -2,7 +2,7 @@
     <div class="main-header">
         <div class="container">
             <div class="logo-wrap" itemprop="logo">
-                <img src="images/logo-idplay.png" alt="Logo Image">
+                <img src="{{asset('images/logo-idplay.png')}}" alt="Logo Image">
             </div>
             <div class="nav-wrap">
                 <nav class="nav-desktop">

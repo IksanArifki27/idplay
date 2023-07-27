@@ -16,4 +16,23 @@ class PaketController extends Controller
         Paket::create($request->all());
         return redirect('/KelolaPaket');
     }
+    public function updatePaket(Request $request ,$id){
+        $data = Paket::find($id);
+        $data->update($request->all());
+        return redirect('/KelolaPaket')->with('success','Data Berhasil di Update');
+        
+    }
+    public function hapusPaket($id){
+        $data = Paket::find($id);
+        $data->delete();
+        return redirect('/KelolaPaket')->with('success','Data Berhasil di hapus');
+    }
+    public function paketProduk (){
+        $datas = Paket::all();
+        return view('products',compact('datas'));
+    }
+    public function detailProduk ($id){
+        $data = Paket::find($id);
+        return view('product-single',compact('data'));
+    }
 }
