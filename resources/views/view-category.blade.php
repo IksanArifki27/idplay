@@ -12,34 +12,12 @@
                   <button class="button" data-filter=".seo">seo</button>
                   <button class="button" data-filter=".marketing">marketing</button>
             </div> --}}
-            <h1 style="font-size: 38px; font-weight:700;">Kategori Paket</h1>
-            <div class="button-group">
-                @foreach ($categoris as $cat)
-                    <a href="/view-category/{{$cat->id}}">
-                    <button class="button" >{{$cat->nama}} </button>
-                @endforeach
-            </div>
-
+            <h2>Kategori {{$kategori->nama}}</h2>
             <div class="grid gap-2" id="cGrid" >
-                {{-- <div class="grid-item business" data-category="business">
-                    <div class="img-wrap">
-                        <img src="images/course-pic.png" alt="courses picture">
-                    </div>
-                    <a href="/single-product" class="learn-desining-banner-course">Contoh >>></a>
-                    <div class="box-body">
-                        <p>Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum</p>
-                        <section>
-                            <p><span>Duration:</span> 4 Years</p>
-                            <p><span>Class Time:</span> 6am-12am / 11am-5pm</p>
-                            <p><span>Fee:</span> 4,00,000</p>
-                        </section>
-                    </div>
-                </div> --}}
-
-                @foreach ($datas as $item) 
+                @foreach ($paket as $item) 
                 <div class="grid-item business" data-category="business">
                     <div class="img-wrap">
-                        <img src="images/course-pic.png" alt="courses picture">
+                        <img src="{{asset('images/course-pic.png')}}" alt="courses picture">
                     </div>
                     <a href="/detail-product/{{$item->id}}" class="learn-desining-banner-course">{{$item->nama}} >>></a>
                     <div class="box-body">

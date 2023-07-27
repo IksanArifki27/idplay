@@ -5,21 +5,21 @@
     <section class="page-content" id="course-page">
         <div class="container">
             <main class="course-detail">
-                <h2>Paket Jumbo</h2>
+                <h2>{{$data->nama}}</h2>
                 <header>
                     <div class="course-box">
                         <i class="fas fa-fast-forward"></i>
-                        <p>30 Mbps</p>
+                        <p>{{$data->kecepatan}} Mbps</p>
                     </div>
 
                     <div class="course-box">
                         <i class="fas fa-user"></i>
-                        <p>10 Devices</p>
+                        <p>{{$data->device}} Devices</p>
                     </div>
 
                     <div class="course-box">
                         <i class="fas fa-money-check-alt"></i>
-                        <p>Rp. 400.000</p>
+                        <p>Rp. {{$data->biaya}} </p>
                         <p>(Per bulan)</p>
                     </div>
                 </header>
@@ -27,17 +27,7 @@
                     <section class="course-intro">
                         <h3>Introduction</h3>
 
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <p>{{$data->deskripsi}} .</p>
                     </section>
 
                     <section class="course-objective">
@@ -79,8 +69,8 @@
                 </article>					
             </main>
             <aside>
-                <div class="reserve-course">
-                    <h2>Berlangganan</h2>
+                {{-- <div class="reserve-course"> --}}
+                    {{-- <h2>Berlangganan</h2>
                     <form>
                         <input type="text" placeholder="Your Name*" required>
                         <input type="email" name="userEmail" placeholder="Your Email Address*" required>
@@ -88,8 +78,10 @@
                         <input type="text" placeholder="Your Phone Number*" required>
                         <textarea placeholder="Write your message"></textarea>
                         <input type="submit" value="Submit">
-                    </form>
-                </div>
+                    </form> --}}
+                {{-- </div> --}}
+                <br><br><br><br><br>
+                    <a href="/register" style="background-color: rgb(245, 186, 76); color:white; padding:20px 30px;font-size:28px; font-weight:500;margin:100px; border-radius:5px;">Berlangganan</a>
                 <!-- New Letter Ends -->
             </aside>
         </div>

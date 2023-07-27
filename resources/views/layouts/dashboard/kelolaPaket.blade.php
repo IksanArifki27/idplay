@@ -94,7 +94,7 @@
                                             <td>{{$data->device}} Device</td>
                                             <td>Rp. {{$data->biaya}}</td>
                                             <td>{{$data->deskripsi}}</td>
-                                            <td>{{$data->kategori}}</td>
+                                            <td>{{$data->category->nama}}</td>
                                             <td>
                                                 {{-- <a href="/KelolaPaket/{{$data->id}}" class="btn btn-primary" data-toggle="modal" data-target="#UpdateProdukModal">Update</a> --}}
                                                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#UpdateProdukModal{{$data->id}}" >update</button>
@@ -153,13 +153,11 @@
                                             <textarea name="deskripsi"  class="form-control form-control" cols="30" rows="10" placeholder="Masukan Deskripsi"></textarea>
                                             
                                         </div>
-                                        <select class="form-select" name="kategori" aria-label="Default select example">
+                                        <select class="form-select" name="category_id" aria-label="Default select example">
                                             <option selected disabled>Pilih Kategori</option>
-                                            <option value="business">Business</option>
-                                            <option value="design">Design</option>
-                                            <option value="development">Development</option>
-                                            <option value="seo">Seo</option>
-                                            <option value="marketing">Marketing</option>
+                                            @foreach ($categoris as $item)
+                                            <option value="{{$item->id}}">{{$item->nama}} </option>
+                                            @endforeach
                                         </select>
                                         <hr>
                                       
@@ -217,13 +215,11 @@
                                         <div class="form-group">
                                              <textarea name="deskripsi"  class="form-control form-control" cols="30" rows="10" placeholder="Masukan Deskripsi" >{{$item->deskripsi}}</textarea>
                                         </div>
-                                        <select class="form-select" name="kategori" aria-label="Default select example" value="{{$item->kategori}}">
-                                            <option selected disabled>{{$item->kategori}}</option>
-                                            <option value="business">Business</option>
-                                            <option value="design">Design</option>
-                                            <option value="development">Development</option>
-                                            <option value="seo">Seo</option>
-                                            <option value="marketing">Marketing</option>
+                                         <select class="form-select" name="category_id" aria-label="Default select example">
+                                            <option selected disabled>Pilih Kategori</option>
+                                            @foreach ($categoris as $cat)
+                                            <option value="{{$cat->id}}">{{$cat->nama}} </option>
+                                            @endforeach
                                         </select>
                                         <hr>
                                       

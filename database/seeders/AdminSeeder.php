@@ -26,5 +26,12 @@ class AdminSeeder extends Seeder
            "password" => bcrypt("admin123"),
            "remember_token" => Str::random(60)
         ]);
+        DB::table('categories')->insert([
+            ["nama" => "Businness"],
+            ["nama" => "Design"],
+            ["nama" => "Development"],
+            ["nama" => "Seo"],
+            ["nama" => "Marketing"],
+        ]);
     }
 }

@@ -13,16 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        //
-        Schema::create('Paket', function (Blueprint $table) {
+        Schema::create('categories', function (Blueprint $table) {
             $table->id();
             $table->string('nama');
-            $table->string('kecepatan');
-            $table->string('device');
-            $table->bigInteger('biaya');
-            $table->string('deskripsi');
-            $table->bigInteger('category_id');
-            // $table->enum('kategori',['business','design','development','seo','marketing']);
             $table->timestamps();
         });
     }
@@ -34,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('categories');
     }
 };

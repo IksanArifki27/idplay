@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Paket;
 use Illuminate\Http\Request;
 
@@ -9,8 +10,10 @@ class PaketController extends Controller
 {
     //
     public function kelolaPaket(){
-        $datas = Paket::all();
-        return view('layouts.dashboard.kelolaPaket',compact('datas'));
+        $datas = Paket::with('category')->get();
+        $categoris = Category::all();
+        // dd($datas);
+        return view('layouts.dashboard.kelolaPaket',compact('datas','categoris'));
     }
     public function tambahPaket(Request $request){
         Paket::create($request->all());
@@ -29,10 +32,21 @@ class PaketController extends Controller
     }
     public function paketProduk (){
         $datas = Paket::all();
-        return view('products',compact('datas'));
+        $categoris = Category::all();
+        return view('products',compact('datas','categoris'));
     }
     public function detailProduk ($id){
         $data = Paket::find($id);
         return view('product-single',compact('data'));
+    }
+    public function viewCategory($slug){
+        if(Paket::where('kategori',$slug)){
+           $kategori =  Category::where('id',$slug)->first();
+           $paket = Paket::where('category_id',$kategori->id)->get();
+            return view('view-category',compact('kategori','paket'));
+        }else{
+            return "tidak ada";
+        }
+       
     }
 }
