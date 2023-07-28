@@ -10,7 +10,7 @@ class PaketController extends Controller
 {
     //
     public function kelolaPaket(){
-        $datas = Paket::with('category')->get();
+        $datas = Paket::with('category')->orderBy('created_at', 'desc')->get();
         $categoris = Category::all();
         // dd($datas);
         return view('layouts.dashboard.kelolaPaket',compact('datas','categoris'));
