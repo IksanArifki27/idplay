@@ -17,7 +17,7 @@ class PaketController extends Controller
     }
     public function tambahPaket(Request $request){
         Paket::create($request->all());
-        return redirect('/KelolaPaket');
+        return redirect('/KelolaPaket')->with('success','Berhasil Tambah Paket');
     }
     public function updatePaket(Request $request ,$id){
         $data = Paket::find($id);

@@ -13,4 +13,8 @@ class CategoryController extends Controller
         return view('layouts.dashboard.KelolaKategori',compact('datas'));
         // dd($datas);
     }
+    public function tambahKategori(Request $request){
+        Category::create($request->all());
+        return redirect('/KelolaKategori')->with('success','Berhasil Tambah Kategori');
+    }
 }

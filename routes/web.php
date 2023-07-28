@@ -70,6 +70,7 @@ Route::post('/KelolaPaket/{id}',[PaketController::class,'updatePaket']);
 Route::get('/hapusPaket/{id}',[PaketController::class,'hapusPaket']);
 
 Route::get('/KelolaKategori',[CategoryController::class,'kelolaKategori']);
+Route::post('/tambahKategori',[CategoryController::class,'tambahKategori']);
 
 
 
