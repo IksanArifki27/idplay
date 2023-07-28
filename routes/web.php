@@ -71,6 +71,7 @@ Route::get('/hapusPaket/{id}',[PaketController::class,'hapusPaket']);
 
 Route::get('/KelolaKategori',[CategoryController::class,'kelolaKategori']);
 Route::post('/tambahKategori',[CategoryController::class,'tambahKategori']);
+Route::get('/hapusKategori/{id}',[CategoryController::class,'hapusKategori']);
 
 
 

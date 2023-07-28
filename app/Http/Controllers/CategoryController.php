@@ -17,4 +17,10 @@ class CategoryController extends Controller
         Category::create($request->all());
         return redirect('/KelolaKategori')->with('success','Berhasil Tambah Kategori');
     }
+
+    public function hapusKategori($id){
+        $data = Category::find($id);
+        $data->delete();
+        return redirect('/KelolaKategori')->with('success','Data Berhasil di hapus');
+    }
 }

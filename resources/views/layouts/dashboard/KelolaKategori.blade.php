@@ -76,7 +76,7 @@
                                             <td>{{$no++}} </td>
                                             <td>{{$dat->nama}} </td>
                                             <td>
-                                                <a href="#" class="btn btn-danger">hapus</a>
+                                                <a href="/hapusKategori/{{$dat->id}}" class="btn btn-danger">hapus</a>
                                             </td>
                                         </tr>
                                         @endforeach
