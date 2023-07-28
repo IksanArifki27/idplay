@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\PaketController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -73,5 +74,6 @@ Route::get('/KelolaKategori',[CategoryController::class,'kelolaKategori']);
 Route::post('/tambahKategori',[CategoryController::class,'tambahKategori']);
 Route::get('/hapusKategori/{id}',[CategoryController::class,'hapusKategori']);
 
+Route::get('/KelolaUser',[UserController::class,'KelolaUser']);
 
 
