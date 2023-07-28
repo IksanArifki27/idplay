@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\PaketController;
 use Illuminate\Support\Facades\Route;
 
@@ -32,7 +33,6 @@ Route::get('/contact', function () {
 //     return view('products');
 // });
 Route::get('/products',[PaketController::class,'paketProduk']);
-
 Route::get('/detail-product/{id}',[PaketController::class,'detailProduk']);
 Route::get('/view-category/{slug}',[PaketController::class,'viewCategory']);
 
@@ -58,7 +58,7 @@ Route::get('/status', function () {
 Route::get('/dashboard', function () {
     return view('layouts.dashboard.main');
 });
-Route::get('/login',[AuthController::class,'loginView']);
+Route::get('/login',[AuthController::class,'loginView'])->name('login');
 Route::post('/login',[AuthController::class,'loginPost']);
 Route::get('/register',[AuthController::class,'registerView']);
 Route::post('/register',[AuthController::class,'registerPost']);
@@ -69,6 +69,7 @@ Route::post('/tambahPaket',[PaketController::class,'tambahPaket']);
 Route::post('/KelolaPaket/{id}',[PaketController::class,'updatePaket']);
 Route::get('/hapusPaket/{id}',[PaketController::class,'hapusPaket']);
 
+Route::get('/KelolaKategori',[CategoryController::class,'kelolaKategori']);
 
 
 

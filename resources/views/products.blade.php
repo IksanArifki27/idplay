@@ -14,6 +14,7 @@
             </div> --}}
             <h1 style="font-size: 38px; font-weight:700;">Kategori Paket</h1>
             <div class="button-group">
+                <button class="button">all</button>
                 @foreach ($categoris as $cat)
                     <a href="/view-category/{{$cat->id}}">
                     <button class="button" >{{$cat->nama}} </button>

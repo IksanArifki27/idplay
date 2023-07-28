@@ -33,6 +33,11 @@
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>kelola Paket</span></a>
             </li>
+             <li class="nav-item">
+                <a class="nav-link" href="/KelolaKategori">
+                    <i class="fas fa-fw fa-wrench"></i>
+                    <span>kelola Kategori</span></a>
+            </li>
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
