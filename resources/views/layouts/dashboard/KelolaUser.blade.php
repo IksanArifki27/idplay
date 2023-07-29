@@ -81,8 +81,8 @@
                                             <td>{{$dat->alamat}} </td>
                                             <td>{{$dat->email}} </td>
                                             <td>
-                                                <a href="#" class="btn btn-primary">Update</a>
-                                                <a href="#" class="btn btn-danger">Hapus</a>
+                                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#UpdateUserModal{{$dat->id}}" >update</button>
+                                                <a href="/HapusUser/{{$dat->id}}" class="btn btn-danger">Hapus</a>
                                             </td>
                                             
                                         </tr>
@@ -96,6 +96,57 @@
 
                 </div>
                 <!-- /.container-fluid -->
+                {{-- update user modao --}}
+                @foreach ($datas as $item) 
+                
+                 <div class="modal fade" id="UpdateUserModal{{$item->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Update Data Pelanggan</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+
+                            <div class="modal-body">
+                            <form class="user" method="POST" action="/KelolaUser/{{$item->id}}">
+                                        @csrf
+                                        <div class="form-group">
+                                            <input type="text" class="form-control form-control"
+                                                id="exampleInputEmail" aria-describedby="emailHelp"
+                                                placeholder="Masukan Nama Paket Produk ..." name="username" value="{{$item->username}}">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="number" class="form-control form-control"
+                                                id="exampleInputEmail" aria-describedby="emailHelp"
+                                                placeholder="Masukan Kecepatan ..." name="noHP" value="{{$item->noHP}}">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control form-control"
+                                                id="exampleInputEmail" aria-describedby="emailHelp"
+                                                placeholder="Masukan Jumlah Device ..." name="alamat" value="{{$item->alamat}}">
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <input type="email" class="form-control form-control"
+                                                id="exampleInputEmail" aria-describedby="emailHelp"
+                                                placeholder="Masukan harga Paket ..." name="email" value="{{$item->email}}">
+                                        </div>
+                                        <hr>
+                                      
+                                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                                        <button class="btn btn-primary" type="submit" >Update</button>
+                                        
+                                    </form>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    @endforeach
+                {{-- end update user modao --}}
 
             </div>
             <!-- End of Main Content -->

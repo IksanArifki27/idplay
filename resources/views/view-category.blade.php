@@ -12,7 +12,10 @@
                   <button class="button" data-filter=".seo">seo</button>
                   <button class="button" data-filter=".marketing">marketing</button>
             </div> --}}
-            <h2>Kategori {{$kategori->nama}}</h2>
+            <a href="/products" style="padding: 8px 16px;  color:white; border-radius:5px; font-size:34px;">🔙</a>
+            <br><br>
+            <h2 style="font-size:24px;justify-content:center; display:flex;">Kategori {{$kategori->nama}}</h2>
+            <br>
             <div class="grid gap-2" id="cGrid" >
                 @foreach ($paket as $item) 
                 <div class="grid-item business" data-category="business">

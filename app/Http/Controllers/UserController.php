@@ -12,4 +12,15 @@ class UserController extends Controller
         $datas = User::all();
         return view('layouts.dashboard.KelolaUser',compact('datas'));
     }
+
+    public function UpdateUser($id,Request $request){
+        $data = User::find($id);
+        $data->update($request->all());
+        return redirect('/KelolaUser')->with('success','Data User Berhasil di update');
+    }
+    public function HapusUser ($id){
+        $data = User::find($id);
+        $data->delete();
+        return redirect('/KelolaUser')->with('success','Data User Berhasil di Hapus');
+    }
 }

@@ -75,5 +75,8 @@ Route::post('/tambahKategori',[CategoryController::class,'tambahKategori']);
 Route::get('/hapusKategori/{id}',[CategoryController::class,'hapusKategori']);
 
 Route::get('/KelolaUser',[UserController::class,'KelolaUser']);
+Route::post('/KelolaUser/{id}',[UserController::class,'UpdateUser']);
+Route::get('/HapusUser/{id}',[UserController::class,'HapusUser']);
+
 
 
