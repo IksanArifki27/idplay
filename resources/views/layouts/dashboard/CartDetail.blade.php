@@ -88,7 +88,10 @@
                                         @endforeach
                                     </tbody>
                                     <tfoot>
-                                        <td colspan="6"> Total harga = <strong> {{$total_harga}} </strong> </td>
+                                        <td colspan="5"> Total harga = <strong> {{$total_harga}} </strong> </td>
+                                        <td> 
+                                            <a href="/orderCash" class="btn btn-success">Check out</a>
+                                        </td>
                                     </tfoot>
                                 </table>
                             </div>
