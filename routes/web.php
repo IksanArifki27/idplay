@@ -78,5 +78,7 @@ Route::get('/KelolaUser',[UserController::class,'KelolaUser']);
 Route::post('/KelolaUser/{id}',[UserController::class,'UpdateUser']);
 Route::get('/HapusUser/{id}',[UserController::class,'HapusUser']);
 
-
-
+Route::get('/layananUser',[PaketController::class,'layananUser']);
+Route::post('/add_cart/{id}',[PaketController::class,'addCart']);
+Route::get('/showCart',[PaketController::class,'showCart']);
+Route::get('/hapusCartItem/{id}',[PaketController::class,'hapusCartItem']);

@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Cart;
 use App\Models\Category;
 use App\Models\Paket;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
 class PaketController extends Controller
 {
@@ -46,7 +49,47 @@ class PaketController extends Controller
             return view('view-category',compact('kategori','paket'));
         }else{
             return "tidak ada";
-        }
-       
+        }  
     }
+
+    public function layananUser (){
+        $categoris = Category::all();
+        $datas = Paket::with('category')->get();
+        return view('layouts.dashboard.layananUser',compact('categoris','datas'));
+    }
+    public function detaillayanan ($id){
+        $data = Paket::find($id);
+        return view('layouts.dashboard.detailLayananUser',compact('data'));
+    }
+
+    public function addCart(Request $request, $id){
+        $user = Auth::user();
+        $paket = Paket::find($id);
+        $cart = new Cart;
+
+        $cart->name=$user->username;
+        $cart->email=$user->email;
+        $cart->alamat=$user->alamat;
+        $cart->user_id=$user->id;
+        $cart->noHP=$user->noHP;
+        $cart->nama_produk=$paket->nama;
+        $cart->biaya=$paket->biaya;
+        $cart->kecepatan=$paket->kecepatan;
+        $cart->device=$paket->device;
+        $cart->paket_id=$paket->id;
+        $cart->save();
+         return redirect()->back();
+    }
+   
+    public function showCart(){
+        $id = Auth::user()->id;
+        $carts = Cart::where('user_id',$id)->get();
+        return view('layouts.dashboard.CartDetail',compact('carts'));
+    }
+   
+   public function hapusCartItem ($id){
+    $data = Cart::find($id);
+    $data->delete();
+    return redirect('/showCart');
+   }
 }

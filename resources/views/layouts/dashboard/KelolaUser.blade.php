@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Halaman kelola kategori</title>
+    <title>Halaman kelola Pelanggan</title>
 
     <!-- Custom fonts for this template -->
     @include('layouts.inc.css')

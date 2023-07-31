@@ -43,6 +43,11 @@
                     <i class="fa fa-users" ></i>
                     <span>Data Pelanggan</span></a>
             </li>
+             <li class="nav-item">
+                <a class="nav-link" href="/layananUser">
+                    <i class="fas fa-fw fa-cog" ></i>
+                    <span>Layanan Produk</span></a>
+            </li>
             {{-- <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
