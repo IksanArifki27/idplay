@@ -58,7 +58,6 @@ Route::get('/testimonials', function () {
 Route::get('/status', function () {
     return view('status');
 });
-Route::get('/dashboard',[DashboardController::class,'index']);
 
 Route::get('/login',[AuthController::class,'loginView'])->name('login');
 Route::post('/login',[AuthController::class,'loginPost']);
@@ -66,25 +65,35 @@ Route::get('/register',[AuthController::class,'registerView']);
 Route::post('/register',[AuthController::class,'registerPost']);
 Route::get('/logout',[AuthController::class,'logout']);
 
-Route::get('/KelolaPaket',[PaketController::class,'kelolaPaket']);
-Route::post('/tambahPaket',[PaketController::class,'tambahPaket']);
-Route::post('/KelolaPaket/{id}',[PaketController::class,'updatePaket']);
-Route::get('/hapusPaket/{id}',[PaketController::class,'hapusPaket']);
+Route::group(['middleware' => ['auth','CekRole:admin']],function(){ 
+    // kelola paket
+    Route::get('/dashboard',[DashboardController::class,'index']);
+    Route::get('/KelolaPaket',[PaketController::class,'kelolaPaket']);
+    Route::post('/tambahPaket',[PaketController::class,'tambahPaket']);
+    Route::post('/KelolaPaket/{id}',[PaketController::class,'updatePaket']);
+    Route::get('/hapusPaket/{id}',[PaketController::class,'hapusPaket']);
+    // kelola kategori
+    Route::get('/KelolaKategori',[CategoryController::class,'kelolaKategori']);
+    Route::post('/tambahKategori',[CategoryController::class,'tambahKategori']);
+    Route::get('/hapusKategori/{id}',[CategoryController::class,'hapusKategori']);
+    // kelola user
+    Route::get('/KelolaUser',[UserController::class,'KelolaUser']);
+    Route::post('/KelolaUser/{id}',[UserController::class,'UpdateUser']);
+    Route::get('/HapusUser/{id}',[UserController::class,'HapusUser']);
+});
 
-Route::get('/KelolaKategori',[CategoryController::class,'kelolaKategori']);
-Route::post('/tambahKategori',[CategoryController::class,'tambahKategori']);
-Route::get('/hapusKategori/{id}',[CategoryController::class,'hapusKategori']);
 
-Route::get('/KelolaUser',[UserController::class,'KelolaUser']);
-Route::post('/KelolaUser/{id}',[UserController::class,'UpdateUser']);
-Route::get('/HapusUser/{id}',[UserController::class,'HapusUser']);
 
-Route::get('/layananUser',[PaketController::class,'layananUser']);
-Route::post('/add_cart/{id}',[PaketController::class,'addCart']);
-Route::get('/showCart',[PaketController::class,'showCart']);
-Route::get('/hapusCartItem/{id}',[PaketController::class,'hapusCartItem']);
-Route::get('/orderCash',[OrderController::class,'orderCash']);
-Route::get('/PesananUser',[OrderController::class,'PesananUser']);
+Route::group(['middleware' => ['auth','CekRole:admin,user']],function(){
 
-Route::get('/pesanan',[OrderController::class,'pesanan']);
-Route::put('/pesanan/{id}',[OrderController::class,'updateOrderStatus']);
+    Route::get('/layananUser',[PaketController::class,'layananUser']);
+    Route::post('/add_cart/{id}',[PaketController::class,'addCart']);
+    Route::get('/showCart',[PaketController::class,'showCart']);
+    Route::get('/hapusCartItem/{id}',[PaketController::class,'hapusCartItem']);
+    Route::get('/orderCash',[OrderController::class,'orderCash']);
+    Route::get('/PesananUser',[OrderController::class,'PesananUser']);
+    
+    Route::get('/pesanan',[OrderController::class,'pesanan']);
+    Route::put('/pesanan/{id}',[OrderController::class,'updateOrderStatus']);
+});
+

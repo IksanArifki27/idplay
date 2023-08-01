@@ -13,21 +13,28 @@
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
+            @if (auth()->user()->role == "admin")
+                
+           
             <li class="nav-item active">
                 <a class="nav-link" href="/dashboard">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
+            @endif
 
             <!-- Divider -->
             <hr class="sidebar-divider">
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Interface
+                layanan
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
+            @if (auth()->user()->role == "admin")
+                
+
              <li class="nav-item">
                 <a class="nav-link" href="/pesanan">
                     <i class="fas fa-dollar-sign" ></i>
@@ -48,6 +55,7 @@
                     <i class="fa fa-users" ></i>
                     <span>Data Pelanggan</span></a>
             </li>
+                        @endif
              <li class="nav-item">
                 <a class="nav-link" href="/layananUser">
                     <i class="fas fa-fw fa-cog" ></i>
