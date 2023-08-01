@@ -83,7 +83,7 @@
                                             <td>{{$data->nama}}</td>
                                             <td>{{$data->kecepatan}} Mbps</td>
                                             <td>{{$data->device}} Device</td>
-                                            <td>Rp. {{$data->biaya}}</td>
+                                            <td> Rp. @money($data->biaya)</td>
                                             <td>{{$data->deskripsi}}</td>
                                             <td>{{$data->category->nama}}</td>
                                             <td>
@@ -97,6 +97,7 @@
                                 
                                     </tbody>
                                 </table>
+                                
                             </div>
                         </div>
                     </div>

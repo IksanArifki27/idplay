@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Halaman Cart Detail</title>
+    <title>Halaman Pesanan Saya</title>
 
     <!-- Custom fonts for this template -->
     @include('layouts.inc.css')
@@ -58,41 +58,38 @@
                                     <thead>
                                         <tr>
                                             <th>No</th>
+                                            <th>Nama Pemesan</th>
+                                            <th>Email</th>
+                                            <th>alamat</th>
                                             <th>Nama Produk</th>
-                                            <th>kecepatan</th>
-                                            <th>device</th>
-                                            <th>harga</th>
-                                            <th>aksi</th>
+                                            <th>Harga</th>
+                                            <th>Status</th>
+                                            <th>Aksi</th>
                                            
                                         </tr>
                                     </thead>
                                     @php
                                         $no = 1;
-                                        $total_harga = 0;
+                                        
                                     @endphp
                                     <tbody>
-                                       @foreach ($carts as $item)
-                                       <tr>
-                                           <td>{{$no++}} </td>
-                                           <td>{{$item->nama_produk}}</td>
-                                           <td>{{$item->kecepatan}}</td>
-                                           <td>{{$item->device}}</td>
-                                           <td>{{$item->biaya}}</td>
-                                           <td>
-                                            <a href="/hapusCartItem/{{$item->id}}" class="btn btn-danger">Hapus</a>
-                                           </td>
+                                    @foreach ($data as $item)
+                                        <tr>
+                                            <td>{{$no++}}</td>
+                                            <td>{{$item->name}} </td>
+                                            <td>{{$item->email}} </td>
+                                            <td>{{$item->alamat}} </td>
+                                            <td>{{$item->nama_produk}} </td>
+                                            <td> @money($item->biaya)</td>
+                                            <td><strong>{{$item->pesan_status}}</strong> </td>
+                                            <td>
+                                                <a href="#" class="btn btn-success">view</a>
+                                            </td>
                                         </tr>
-                                        @php
-                                            $total_harga += $item->biaya;
-                                        @endphp
-                                        @endforeach
+                                    @endforeach
+                                       
                                     </tbody>
-                                    <tfoot>
-                                        <td colspan="5"> Total harga = <strong> {{$total_harga}} </strong> </td>
-                                        <td> 
-                                            <a href="/orderCash" class="btn btn-success">Check out</a>
-                                        </td>
-                                    </tfoot>
+                                    
                                 </table>
                             </div>
                         </div>

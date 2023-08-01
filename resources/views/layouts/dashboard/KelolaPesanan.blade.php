@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Halaman Cart Detail</title>
+    <title>Halaman Kelola Pesanan</title>
 
     <!-- Custom fonts for this template -->
     @include('layouts.inc.css')
@@ -58,42 +58,53 @@
                                     <thead>
                                         <tr>
                                             <th>No</th>
+                                            <th>Nama Pemesan</th>
+                                            <th>Email</th>
+                                            <th>No Hp</th>
+                                            <th>alamat</th>
                                             <th>Nama Produk</th>
-                                            <th>kecepatan</th>
-                                            <th>device</th>
-                                            <th>harga</th>
-                                            <th>aksi</th>
+                                            <th>Harga</th>
+                                            <th>Status</th>
+                                            <th>Aksi</th>
                                            
                                         </tr>
                                     </thead>
                                     @php
                                         $no = 1;
-                                        $total_harga = 0;
+                                        
                                     @endphp
                                     <tbody>
-                                       @foreach ($carts as $item)
-                                       <tr>
-                                           <td>{{$no++}} </td>
-                                           <td>{{$item->nama_produk}}</td>
-                                           <td>{{$item->kecepatan}}</td>
-                                           <td>{{$item->device}}</td>
-                                           <td>{{$item->biaya}}</td>
-                                           <td>
-                                            <a href="/hapusCartItem/{{$item->id}}" class="btn btn-danger">Hapus</a>
-                                           </td>
+                                        @foreach ($datas as $data)     
+                                        <tr>
+                                            <td>{{$no++}} </td>
+                                            <td>{{$data->name}} </td>
+                                            <td>{{$data->email}} </td>
+                                            <td>{{$data->noHP}} </td>
+                                            <td>{{$data->alamat}} </td>
+                                            <td>{{$data->nama_produk}} </td>
+                                            <td> @money($data->biaya)</td>
+                                            <td>{{$data->pesan_status}}</td>
+                                            <td>
+                                               <form action="/pesanan/{{$data->id}}" method="POST">
+                                                @csrf
+                                                @method('PUT')
+                                                <div class="input-group">
+                                                    <select name="order_status" class="form-select mr-3">
+                                                        <option value="">Pilih Status</option>
+                                                        <option value="diproses" {{Request::get('status')== 'diproses' ? 'pilih' : ''}}>diproses</option>
+                                                        <option value="survei" {{Request::get('status')== 'survei' ? 'pilih' : ''}}>survei</option>
+                                                        <option value="komplit" {{Request::get('status')== 'komplit' ? 'pilih' : ''}}>komplit</option>
+                                                    </select>
+                                                    <button type="submit" class="btn btn-primary ">update status</button>
+                                                </div>
+                                               </form>
+                                            </td>
                                         </tr>
-                                        @php
-                                            $total_harga += $item->biaya;
-                                        @endphp
                                         @endforeach
                                     </tbody>
-                                    <tfoot>
-                                        <td colspan="5"> Total harga = <strong> {{$total_harga}} </strong> </td>
-                                        <td> 
-                                            <a href="/orderCash" class="btn btn-success">Check out</a>
-                                        </td>
-                                    </tfoot>
+                                    
                                 </table>
+                                {{$datas->links()}}
                             </div>
                         </div>
                     </div>

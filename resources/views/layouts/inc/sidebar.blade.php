@@ -29,6 +29,11 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
              <li class="nav-item">
+                <a class="nav-link" href="/pesanan">
+                    <i class="fas fa-dollar-sign" ></i>
+                    <span>Pesanann</span></a>
+            </li>
+             <li class="nav-item">
                 <a class="nav-link" href="/KelolaPaket">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>kelola Paket</span></a>
@@ -48,6 +53,12 @@
                     <i class="fas fa-fw fa-cog" ></i>
                     <span>Layanan Produk</span></a>
             </li>
+             <li class="nav-item">
+                <a class="nav-link" href="/PesananUser">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <span>Pesanan Saya</span></a>
+            </li>
+            
             {{-- <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">

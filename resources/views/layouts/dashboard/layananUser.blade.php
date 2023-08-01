@@ -68,12 +68,12 @@
                                             src="images/course-pic.png" alt="...">
                                     </div>
                                     <div style="text-align: justify;">
-                                        <h3 class="fw-500">{{$item->nama}} </h3>
+                                        <h3 class="fw-500"> <strong>{{$item->nama}}</strong> </h3>
                                         <div class="box-body">
                                             <section>
-                                                <p><span>Speed : </span>{{$item->kecepatan}} Mbps </p>
-                                                <p><span>Device : </span>{{$item->device}} Device</p>
-                                                <p><span>Fee:</span> {{$item->biaya}} </p>
+                                                <p><span>Speed : </span>{{$item->kecepatan}} Mbps <i class="fas fa-fast-forward"></i>  </p>
+                                                <p><span>Device : </span>{{$item->device}} Device <i class="fas fa-user"></i> </p>
+                                                <p><span>Fee:</span> @money($item->biaya) <i class="fas fa-money-check-alt"></i> </p>
                                             </section>
                                         <p>{{$item->deskripsi}}</p>
 
