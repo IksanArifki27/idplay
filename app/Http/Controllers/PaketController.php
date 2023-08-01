@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Cart;
 use App\Models\Category;
+use App\Models\Order;
 use App\Models\Paket;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -78,7 +79,7 @@ class PaketController extends Controller
         $cart->device=$paket->device;
         $cart->paket_id=$paket->id;
         $cart->save();
-         return redirect()->back();
+         return redirect()->back()->with('success','Produk Berhasil ditambah ke keranjang');
     }
    
     public function showCart(){
@@ -90,6 +91,8 @@ class PaketController extends Controller
    public function hapusCartItem ($id){
     $data = Cart::find($id);
     $data->delete();
-    return redirect('/showCart');
+    return redirect('/showCart')->with('success','Berhasil Menghapus Produk dari keranjang');;
    }
+
+  
 }
