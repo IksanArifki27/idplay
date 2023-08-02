@@ -4,7 +4,7 @@
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/dashboard">
                 <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-laugh-wink"></i>
+                    <i class="fa fa-wifi"></i>
                 </div>
                 <div class="sidebar-brand-text mx-3">IDPLAY <sup>2</sup></div>
             </a>
@@ -38,7 +38,7 @@
              <li class="nav-item">
                 <a class="nav-link" href="/pesanan">
                     <i class="fas fa-dollar-sign" ></i>
-                    <span>Pesanann</span></a>
+                    <span>Kelola Pesanann</span></a>
             </li>
              <li class="nav-item">
                 <a class="nav-link" href="/KelolaPaket">
