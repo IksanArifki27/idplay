@@ -58,12 +58,13 @@
                                     <thead>
                                         <tr>
                                             <th>No</th>
-                                            <th>Nama Pemesan</th>
+                                            <th>Nama Pelanggan</th>
+                                            <th>Tgl Pesan</th>
                                             <th>Email</th>
-                                            <th>alamat</th>
+                                           
                                             <th>Nama Produk</th>
                                             <th>Harga</th>
-                                            <th>Status</th>
+                                            
                                             <th>Aksi</th>
                                            
                                         </tr>
@@ -77,13 +78,13 @@
                                         <tr>
                                             <td>{{$no++}}</td>
                                             <td>{{$item->name}} </td>
+                                            <td>{{$item->created_at->format('d-M-Y')}} </td>
                                             <td>{{$item->email}} </td>
-                                            <td>{{$item->alamat}} </td>
                                             <td>{{$item->nama_produk}} </td>
                                             <td> @money($item->biaya)</td>
-                                            <td><strong>{{$item->pesan_status}}</strong> </td>
+                                            
                                             <td>
-                                                <a href="#" class="btn btn-success">view</a>
+                                                <a href="#" data-toggle="modal" data-target="#ViewPesananUser{{$item->id}}" class="btn btn-success">view</a>
                                             </td>
                                         </tr>
                                     @endforeach
@@ -110,6 +111,51 @@
 
     </div>
     <!-- End of Page Wrapper -->
+    {{-- modal view --}}
+    @foreach ($data as $dat)
+    <div class="modal fade" id="ViewPesananUser{{$dat->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Detail Pesanan Anda</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Nama Pelanggan :{{$dat->name}} </p>
+                    <p>nama Produk :{{$dat->nama_produk}} </p>
+                    <p>Alamat :{{$dat->alamat}} </p>
+                    <p>Email :{{$dat->email}} </p>
+                    <p>Harga : @money($dat->biaya) </p>
+                    <h2 >Status Pesanan {{$dat->pesan_status}} </h2>
+                    @php
+                        $status = $dat->pesan_status;
+                    @endphp
+                    <ul class="bar">
+                        <li class="diproses" >Diproses</li>
+                        <li class="{{$dat->pesan_status == "survei" ? " survei" : "no"}}" >survei</li>
+                        @if ($status == "komplit")
+                        <li class="survei" >survei</li>
+                        @else
+                            
+                        @endif
+                        <li class="{{$dat->pesan_status == "komplit" ? "komplit " : "no"}}" >Komplit</li>
+                       
+                        
+                    </ul>
+
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" type="button" data-dismiss="modal">kembali</button>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+     @endforeach
+    {{-- end modal view --}}
 
 
     <!-- Scroll to Top Button-->

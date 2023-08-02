@@ -92,6 +92,7 @@ Route::group(['middleware' => ['auth','CekRole:admin,user']],function(){
     Route::get('/hapusCartItem/{id}',[PaketController::class,'hapusCartItem']);
     Route::get('/orderCash',[OrderController::class,'orderCash']);
     Route::get('/PesananUser',[OrderController::class,'PesananUser']);
+    Route::get('/PesananUser/{id}',[OrderController::class,'PesananUserDetail']);
     
     Route::get('/pesanan',[OrderController::class,'pesanan']);
     Route::put('/pesanan/{id}',[OrderController::class,'updateOrderStatus']);

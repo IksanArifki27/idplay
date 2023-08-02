@@ -17,12 +17,15 @@ class AuthController extends Controller
         if (Auth::attempt($request->only('email','password'))) {
             return redirect('/dashboard');
         }
-        return redirect('/login');
+        return redirect('/login')->with('error','username atau password salah!');
     }
     public function registerView(){
          return view('layouts.dashboard.register');
     }
     public function registerPost(Request $request){
+        $request->validate([
+            "password" => 'min:4'
+        ]);
         User::create([
             "username" => $request->username,
             "noHP" => $request->noHP,

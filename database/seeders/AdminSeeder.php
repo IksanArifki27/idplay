@@ -26,6 +26,15 @@ class AdminSeeder extends Seeder
            "password" => bcrypt("admin123"),
            "remember_token" => Str::random(60)
         ]);
+        DB::table('users')->insert([
+           "username" => "Admin IdPlay 2",
+           "noHP" => "0812345678",
+           "role" => "admin",
+           "alamat" => "Malang",
+           "email" => "idplay@gmail.com",
+           "password" => bcrypt("idplay123"),
+           "remember_token" => Str::random(60)
+        ]);
         DB::table('categories')->insert([
             ["nama" => "Businness"],
             ["nama" => "Design"],

@@ -14,6 +14,12 @@
             </div> --}}
             <a href="/products" style="padding: 8px 16px;  color:white; border-radius:5px; font-size:34px;">🔙</a>
             <br><br>
+             @if ($message = Session::get('error'))
+                    <div class="alert alert-success alert-block">
+                    <button type="button" class="close" data-dismiss="alert">×</button>	
+                                <strong>{{ $message }}</strong>
+                             </div>     
+                @endif
             <h2 style="font-size:24px;justify-content:center; display:flex;">Kategori {{$kategori->nama}}</h2>
             <br>
             <div class="grid gap-2" id="cGrid" >

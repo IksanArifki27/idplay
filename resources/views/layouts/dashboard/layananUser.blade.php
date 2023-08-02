@@ -75,7 +75,7 @@
                                                 <p><span>Device : </span>{{$item->device}} Device <i class="fas fa-user"></i> </p>
                                                 <p><span>Fee:</span> @money($item->biaya) <i class="fas fa-money-check-alt"></i> </p>
                                             </section>
-                                        <p>{{$item->deskripsi}}</p>
+                                        <p>{{ Str::limit($item->deskripsi, 100) }}</p>
 
                                         <form action="/add_cart/{{$item->id}}" method="POST">
                                             @csrf

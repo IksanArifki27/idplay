@@ -49,7 +49,7 @@ class PaketController extends Controller
            $paket = Paket::where('category_id',$kategori->id)->get();
             return view('view-category',compact('kategori','paket'));
         }else{
-            return "tidak ada";
+            return redirect('/view-category/{slug}')->with('error','Paket Categori Belum Tersedia');
         }  
     }
 

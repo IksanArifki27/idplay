@@ -59,4 +59,9 @@ class OrderController extends Controller
         return view('layouts.dashboard.PesananUser',compact('data'));
    }
 
+   public function PesananUserDetail ($id){
+    $datas = Order::where('id',$id);
+    dd($datas);
+   }
+
 }

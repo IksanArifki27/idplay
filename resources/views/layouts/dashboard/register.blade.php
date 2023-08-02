@@ -28,6 +28,12 @@
     <div class="container">
 
         <div class="card o-hidden border-0 shadow-lg my-5">
+                        @error('password')
+                            <div class="alert alert-danger alert-block">
+                                <button type="button" class="close" data-dismiss="alert">×</button>	
+                            <strong>{{ $message }}</strong>
+                             </div>     
+                            @enderror
             <div class="card-body p-0">
                 <!-- Nested Row within Card Body -->
                 <div class="row">
