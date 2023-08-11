@@ -135,10 +135,10 @@
                     @endphp
                     <ul class="bar">
                         <li class="diproses" >Diproses</li>
-                        <li class="{{$dat->pesan_status == "survei" ? " survei" : "no"}}" >survei</li>
                         @if ($status == "komplit")
                         <li class="survei" >survei</li>
                         @else
+                        <li class="{{$dat->pesan_status == "survei" ? " survei" : "no"}}" >survei</li>
                             
                         @endif
                         <li class="{{$dat->pesan_status == "komplit" ? "komplit " : "no"}}" >Komplit</li>

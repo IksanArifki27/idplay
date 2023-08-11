@@ -47,7 +47,7 @@
                             <li>Develop interactive Web pages using XHTML, HTML/DHTML & CSS</li>
                         </ul>
 
-                        <h3>Certification</h3>
+                        {{-- <h3>Certification</h3>
                         <p>After this course Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodc illum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
                         <h3>Who can apply for this course?</h3>
@@ -64,7 +64,7 @@
                             <li>Digital Class</li>
                             <li>Field Visit and real project demonstration</li>
                             <li>+2 with managem</li>
-                        </ul>
+                        </ul> --}}
                     </section>
                 </article>					
             </main>
@@ -81,7 +81,11 @@
                     </form> --}}
                 {{-- </div> --}}
                 <br><br><br><br><br>
-                    <a href="/register" style="background-color: rgb(245, 186, 76); color:white; padding:20px 30px;font-size:28px; font-weight:500;margin:100px; border-radius:5px;">Berlangganan</a>
+                <form action="/add_cart/{{$data->id}}" method="post">
+                        @csrf
+                         <button type="submit" style="background-color: rgb(245, 186, 76); color:white; padding:20px 30px;font-size:28px; font-weight:500;margin:100px; border-radius:5px;" >Beli</button>
+                    </form>
+                    {{-- <a href="/register" style="background-color: rgb(245, 186, 76); color:white; padding:20px 30px;font-size:28px; font-weight:500;margin:100px; border-radius:5px;">Berlangganan</a> --}}
                 <!-- New Letter Ends -->
             </aside>
         </div>

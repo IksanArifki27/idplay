@@ -74,3 +74,30 @@
 /* .bar li.komplit + li:after {
     background-color: #f1c40f;
 } */
+
+/* seach resi */
+
+.resi {
+    margin: auto;
+}
+.inputresi {
+    padding: 30px 40px;
+    height: 10px 40px;
+    width: 100%;
+    font-size: 24px;
+    margin: auto;
+}
+
+.resi {
+    margin: 0 35%;
+}
+
+.btnresi {
+    margin: 10px 20%;
+    padding: 10px 25px;
+    font-size: 18px;
+    width: 200px;
+    background-color: #f1c40f;
+    border-radius: 5px;
+    font-weight: bold;
+}

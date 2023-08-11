@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('name')->nullable();
             $table->string('email')->nullable();
             $table->string('noHP')->nullable();
+            $table->string('resi')->nullable();
             $table->string('alamat')->nullable();
             $table->integer('user_id')->nullable();
             $table->string('nama_produk')->nullable();

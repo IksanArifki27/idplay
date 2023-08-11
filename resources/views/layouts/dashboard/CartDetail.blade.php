@@ -46,6 +46,7 @@
 
                     <!-- DataTales Example -->
                     <div class="card card-shadow">
+                        
                         <div class="card-body">
                             <div class="table-responsive">
                                  @if ($message = Session::get('success'))

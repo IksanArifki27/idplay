@@ -6,6 +6,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\PaketController;
 use App\Http\Controllers\UserController;
+use App\Models\Order;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,9 +21,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 // public
-Route::get('/', function () {
-    return view('index');
-});
+
 
 Route::get('/about', function () {
     return view('about');
@@ -58,7 +57,7 @@ Route::get('/testimonials', function () {
 Route::get('/status', function () {
     return view('status');
 });
-
+Route::get('/',[OrderController::class,'home']);
 Route::get('/login',[AuthController::class,'loginView'])->name('login');
 Route::post('/login',[AuthController::class,'loginPost']);
 Route::get('/register',[AuthController::class,'registerView']);
@@ -82,15 +81,17 @@ Route::group(['middleware' => ['auth','CekRole:admin']],function(){
     Route::get('/HapusUser/{id}',[UserController::class,'HapusUser']);
 });
 
+Route::get('/showCart',[PaketController::class,'showCart']);
+Route::get('/orderCash',[OrderController::class,'orderCash']);
+Route::get('/hapusCartItem/{id}',[PaketController::class,'hapusCartItem']);
+Route::post('/add_cart/{id}',[PaketController::class,'addCart']);
+Route::get('/thanks',[OrderController::class,'thanks']);
+// Route::get('/cek-resi',[OrderController::class,'cekresi'])->name('search');
+Route::get("/cek-resi", [OrderController::class, 'cekresijson']);
 
-
-Route::group(['middleware' => ['auth','CekRole:admin,user']],function(){
+Route::group(['middleware' => ['auth','CekRole:admin']],function(){
 
     Route::get('/layananUser',[PaketController::class,'layananUser']);
-    Route::post('/add_cart/{id}',[PaketController::class,'addCart']);
-    Route::get('/showCart',[PaketController::class,'showCart']);
-    Route::get('/hapusCartItem/{id}',[PaketController::class,'hapusCartItem']);
-    Route::get('/orderCash',[OrderController::class,'orderCash']);
     Route::get('/PesananUser',[OrderController::class,'PesananUser']);
     Route::get('/PesananUser/{id}',[OrderController::class,'PesananUserDetail']);
     

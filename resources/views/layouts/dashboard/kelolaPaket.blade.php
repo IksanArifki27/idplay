@@ -65,6 +65,7 @@
                                             <th>No</th>
                                             <th>Nama Paket</th>
                                             <th>Kecepatan</th>
+                                            <th>gambar</th>
                                             <th>Device</th>
                                             <th>Biaya</th>
                                             <th>Deskripsi</th>
@@ -81,6 +82,9 @@
                                             <td>{{$no++}}</td>
                                             <td>{{$data->nama}}</td>
                                             <td>{{$data->kecepatan}} Mbps</td>
+                                            <td> 
+                                                <img src="{{asset('gambarProduct/'. $data->gambar)}}" width="100" alt="">
+                                            </td>
                                             <td>{{$data->device}} Device</td>
                                             <td> Rp. @money($data->biaya)</td>
                                             <td>{{$data->deskripsi}}</td>
@@ -117,7 +121,7 @@
                     </button>
                 </div>
                             <div class="modal-body">
-                            <form class="user" method="POST" action="/tambahPaket">
+                            <form class="user" method="POST" action="/tambahPaket" enctype="multipart/form-data">
                                         @csrf
                                         <div class="form-group">
                                             <input type="text" class="form-control form-control"
@@ -151,7 +155,12 @@
                                             @endforeach
                                         </select>
                                         <hr>
-                                      
+                                        <div class="form-group">
+                                            <input type="file" class="form-control form-control"
+                                                aria-describedby="emailHelp"
+                                                 name="gambar">
+                                        </div>
+                                        
                                         <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
                                         <button class="btn btn-primary" type="submit" >Tambah</button>
                                         
@@ -180,7 +189,7 @@
                 </div>
 
                             <div class="modal-body">
-                            <form class="user" method="POST" action="/KelolaPaket/{{$item->id}}">
+                            <form class="user" method="POST" action="/KelolaPaket/{{$item->id}}" enctype="multipart/form-data">
                                         @csrf
                                         <div class="form-group">
                                             <input type="text" class="form-control form-control"
@@ -213,7 +222,11 @@
                                             @endforeach
                                         </select>
                                         <hr>
-                                      
+                                       <div class="form-group">
+                                            <input type="file" class="form-control form-control"
+                                                aria-describedby="emailHelp"
+                                                 name="gambar">
+                                        </div>
                                         <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
                                         <button class="btn btn-primary" type="submit" >Update</button>
                                         

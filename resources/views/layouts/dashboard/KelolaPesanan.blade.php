@@ -61,8 +61,9 @@
                                             <th>Nama Pemesan</th>
                                             <th>Tgl Pesan</th>
                                             <th>Email</th>
+                                            <th>NO RESI</th>
                                             <th>No Hp</th>
-                                            <th>alamat</th>
+                                            {{-- <th>alamat</th> --}}
                                             <th>Nama Produk</th>
                                             <th>Harga</th>
                                             <th>Status</th>
@@ -81,8 +82,9 @@
                                             <td>{{$data->name}} </td>
                                             <td>{{$data->created_at->format('d-M-Y')}} </td>
                                             <td>{{$data->email}} </td>
+                                            <td>{{$data->resi}} </td>
                                             <td>{{$data->noHP}} </td>
-                                            <td>{{$data->alamat}} </td>
+                                            {{-- <td>{{$data->alamat}} </td> --}}
                                             <td>{{$data->nama_produk}} </td>
                                             <td> @money($data->biaya)</td>
                                             <td><strong>{{$data->pesan_status}}</strong></td>

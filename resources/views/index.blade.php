@@ -4,7 +4,7 @@
 
 
     {{-- VIDEO --}}
-    <div class="banner">
+    {{-- <div class="banner">
         <div class="owl-five owl-carousel owl-theme">
             <div class="item-video">
                 <iframe width="100%" height="450" src="https://www.youtube.com/embed/ENVW3uZ3a-4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
@@ -27,10 +27,10 @@
                 <iframe width="100%" height="450" src="https://www.youtube.com/embed/ktvTqknDobU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
       </div>
-    </div> 
+    </div>  --}}
 
     <div id="page" class="site" itemscope itemtype="http://schema.org/LocalBusiness">
-    <div class="banner">
+    {{-- <div class="banner">
         <div class="owl-five owl-carousel owl-theme">
             <div class="item-video">
                 <iframe width="100%" height="450" src="https://www.youtube.com/embed/ENVW3uZ3a-4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
@@ -53,7 +53,7 @@
                 <iframe width="100%" height="450" src="https://www.youtube.com/embed/ktvTqknDobU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
       </div>
-    </div> 
+    </div>  --}}
     <div class="banner">
         <div class="owl-four owl-carousel" itemprop="image">
             <img src="images/page-banner.png" alt="Image of Bannner">
@@ -79,7 +79,7 @@
             <div class="courses">
                 <div class="owl-one owl-carousel">
                     <div class="box-wrap" itemprop="event" itemscope itemtype=" http://schema.org/Course">
-                        <div class="img-wrap" itemprop="image"><img src="images/course-pic.png" alt="courses picture"></div>
+                        <div class="img-wrap" itemprop="image"><img src="images/home-package.png" alt="courses picture"></div>
                             <a href="/products" class="learn-desining-banner" itemprop="name">HOME</a>
                         <div class="box-body" itemprop="description">
                             <p><b>Menghadirkan layanan internet dan hiburan terbaik di rumah Anda.
@@ -94,7 +94,7 @@
                     </div>
 
                     <div class="box-wrap" itemprop="event" itemscope itemtype=" http://schema.org/Course">
-                        <div class="img-wrap"  itemprop="image"><img src="images/course-pic.png" alt="courses picture"></div>
+                        <div class="img-wrap"  itemprop="image"><img src="images/business-package.png" alt="courses picture"></div>
                             <a href="/products" class="learn-desining-banner" itemprop="name">BUSINESS</a>
                         <div class="box-body" itemprop="description">
                             <p><b>Memberikan layanan terbaik untuk perusahaan dan perkantoran SOHO 
@@ -175,6 +175,28 @@
         </div>
     </section>
     <!-- End of gallery Images -->
+    {{-- cek resi --}}
+    <div class="page-heading">
+        <div class="container">
+            <h2>Cek Resi</h2>
+        </div>
+    </div>
+    <section class="cek-resi">
+        <div class="container">
+           <div class="resi">
+                <input type="text" id="cekresi" class="inputresi" placeholder="IDP-XXXX">
+                <br>
+                <button type="button" class="btnresi" id="btnresi">Cek Resi</button>
+            </div>
+        </div>
+        <br><br>
+        <div class="container" id="containerdata">
+        </div>
+           
+        
+    </section>
+    <br><br>
+    {{-- end cek resi --}}
     <section class="page-heading">
         <div class="container">
             <h2>latest news</h2>
@@ -222,6 +244,152 @@
         </div>
     </section>
     <!-- Latest News CLosed -->
+    {{-- about us --}}
+    <div class="page-heading">
+        <div class="container">
+            <h2>About US</h2>
+        </div>
+    </div>
+    <div id="page" class="site">
+    <section class="about-upper-section" itemprop="mainContentofPage">
+        <div class="container">
+             
+            <article class="who-we-are">
+                <h2 class="top-heading">WHO WE ARE</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex</p>
+            </article>
+            <div class="our-story">
+                <h2 class="top-heading">our story</h2>
+                <ul>
+                    <li><i class="fas fa-chalkboard-teacher"></i> <a href="#">10+ certified services</a></li>
+                    <li><i class="fas fa-graduation-cap"></i> <a href="#">100K+ products sold</a></li>
+                    <li><i class="fas fa-book-open"></i> <a href="#">50+ awardes</a></li>
+                    <li><i class="fas fa-users"></i> <a href="#">200K+ followers</a></li>
+
+                    <!-- For None link use below -->
+                    <!-- <li><i class="fas fa-chalkboard-teacher"></i> <p>60+ certified teachers</p></li>
+                    <li><i class="fas fa-graduation-cap"></i>  <p>600+ students enrolled</p></li>
+                    <li><i class="fas fa-book-open"></i>  <p>50+ courses completed</p></li>
+                    <li><i class="fas fa-users"></i>  <p>10000+ foreign followers</p></li> -->
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    {{-- <section class="team-members" itemprop="contributor">
+        <div class="container">
+            <h2 class="top-heading">meet our team</h2>
+            <article class="developer-grid">
+                <div class="developer-wrap">
+                    <img src="images/developer-img.jpg" alt="developer images">
+                    <h3>Member Name</h3>
+                    <p>Web Developer</p>
+                    <ul>
+                        <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                        <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                        <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="developer-wrap">
+                    <img src="images/developer-img.jpg" alt="developer images">
+                    <h3>Member Name</h3>
+                    <p>Web Developer</p>
+                    <ul>
+                        <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                        <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                        <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="developer-wrap">
+                    <img src="images/developer-img.jpg" alt="developer images">
+                    <h3>Member Name</h3>
+                    <p>Web Developer</p>
+                    <ul>
+                        <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                        <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                        <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="developer-wrap">
+                    <img src="images/developer-img.jpg" alt="developer images">
+                    <h3>Member Name</h3>
+                    <p>Web Developer</p>
+                    <ul>
+                        <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                        <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                        <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="developer-wrap">
+                    <img src="images/developer-img.jpg" alt="developer images">
+                    <h3>Member Name</h3>
+                    <p>Web Developer</p>
+                    <ul>
+                        <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                        <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                        <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="developer-wrap">
+                    <img src="images/developer-img.jpg" alt="developer images">
+                    <h3>Member Name</h3>
+                    <p>Web Developer</p>
+                    <ul>
+                        <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                        <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                        <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="developer-wrap">
+                    <img src="images/developer-img.jpg" alt="developer images">
+                    <h3>Member Name</h3>
+                    <p>Web Developer</p>
+                    <ul>
+                        <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                        <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                        <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="developer-wrap">
+                    <img src="images/developer-img.jpg" alt="developer images">
+                    <h3>Member Name</h3>
+                    <p>Web Developer</p>
+                    <ul>
+                        <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                        <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                        <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
+                    </ul>
+                </div>
+            </article>
+        </div>
+    </section> --}}
+    <!-- Team Members Closed  -->
+</div>
+    {{-- end about us --}}
 </div>
 
 @endsection

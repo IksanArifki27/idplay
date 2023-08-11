@@ -20,15 +20,33 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="menu-parent"><a href="/info">Info</a>
+                        {{-- <li class="menu-parent"><a href="/info">Info</a>
                             <ul class="sub-menu">
                                 <li><a href="#">Child</a></li>
                                 <li><a href="#">Child</a></li>
                             </ul>
-                        </li>
-                        <li><a href="/about">About</a></li>
+                        </li> --}}
+                        {{-- <li><a href="/about">About</a></li> --}}
+                        <li> <a href="#cekresi">Cek Resi</a> </li>
                         <li><a href="/contact">Contact</a></li>
-                        <li><a href="/login">Login</a></li>
+                        <li><a href="/showCart">Cart</a></li>
+                        
+                        @if (Route::has('login'))
+                            @auth
+                            <li class="menu-parent">
+                                <a href="#">{{ auth()->user()->username}} </a>
+                                <ul class="sub-menu">
+                                    <li><a href="/logout">Logout</a> </li>
+                                </ul>
+                            </li>
+                            
+                            @else
+                            <li><a href="/login">Login</a></li>
+                        
+                        @endauth
+                        @endif
+                        
+                        
                     </ul>
                 </nav>
                 <div id="bar">
