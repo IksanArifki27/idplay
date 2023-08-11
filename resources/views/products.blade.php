@@ -51,11 +51,13 @@
                             <p><span>Device : </span>{{$item->device}} Device</p>
                             <p><span>Fee:</span> @money($item->biaya) </p>
                         </section>
-                        <a href="/detail-product/{{$item->id}}" style="background-color: orange; padding: 10px 20px; font-size: 16px; font-weight: bold; color: white; width: 100px; border-radius: 5px; cursor: pointer;" >Detail Paket</a>
-                    <form action="/add_cart/{{$item->id}}" method="post">
-                        @csrf
-                         <button type="submit" style="background-color: orange; padding: 10px 20px; font-size: 16px; font-weight: bold; color: white; width: 100px; border-radius: 5px; cursor: pointer;" >Beli</button>
-                    </form>
+                    <div style="display: flex">
+                        <a href="/detail-product/{{$item->id}}" style="background-color: orange; padding: 10px 20px; font-size: 16px; font-weight: bold; color: white; width: 100px; border-radius: 5px; cursor: pointer; margin:0 10px" >Detail </a>
+                        <form action="/add_cart/{{$item->id}}" method="post">
+                            @csrf
+                            <button type="submit" style="background-color: orange; padding: 10px 20px; font-size: 16px; font-weight: bold; color: white; width: 100px; border-radius: 5px; cursor: pointer;" >Beli</button>
+                        </form>
+                    </div>
                     </div>
                 </div>
                 @endforeach

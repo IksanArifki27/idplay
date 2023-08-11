@@ -13,7 +13,7 @@
 
                         @foreach ($orders as $item)
                         <h2>Nama = {{$item->name}}</h2>
-                        <h2>ID Pelanggan =  {{$item->resi}}</h2>
+                        <h2>No RESI =  {{$item->resi}}</h2>
                         @endforeach
                     </div>
                 </div>

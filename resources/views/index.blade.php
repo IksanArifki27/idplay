@@ -68,7 +68,7 @@
     </div>
     
     <!-- Banner Close -->
-    <div class="page-heading">
+    <div class="page-heading" >
         <div class="container">
             <h2>HOME PACKAGES</h2>
         </div>
@@ -176,7 +176,7 @@
     </section>
     <!-- End of gallery Images -->
     {{-- cek resi --}}
-    <div class="page-heading">
+    <div class="page-heading" id="cekresiIDP">
         <div class="container">
             <h2>Cek Resi</h2>
         </div>
