@@ -23,7 +23,7 @@
                         <p>(Per bulan)</p>
                     </div>
                 </header>
-                <article>
+                {{-- <article>
                     <section class="course-intro">
                         <h3>Introduction</h3>
 
@@ -47,7 +47,7 @@
                             <li>Develop interactive Web pages using XHTML, HTML/DHTML & CSS</li>
                         </ul>
 
-                        {{-- <h3>Certification</h3>
+                        <h3>Certification</h3>
                         <p>After this course Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodc illum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
                         <h3>Who can apply for this course?</h3>
@@ -64,9 +64,9 @@
                             <li>Digital Class</li>
                             <li>Field Visit and real project demonstration</li>
                             <li>+2 with managem</li>
-                        </ul> --}}
+                        </ul>
                     </section>
-                </article>					
+                </article>					 --}}
             </main>
             <aside>
                 {{-- <div class="reserve-course"> --}}
