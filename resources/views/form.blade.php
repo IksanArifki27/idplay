@@ -91,12 +91,12 @@
                                 </div>
                                  <div id="map"></div> 
                                   <div class="form-group">
-                                    <input  type="text" class="form-control form-control-user" id="exampleInputEmail"
-                                        placeholder="Email Address" name="lat" value="{{$id}}">
+                                    <input  type="hidden" class="form-control form-control-user" id="latitude"
+                                        placeholder="Email Address" name="latitude">
                                 </div>
                                  <div class="form-group">
-                                    <input  type="text" class="form-control form-control-user" id="exampleInputEmail"
-                                        placeholder="Email Address" name="lot" value="{{$id}}">
+                                    <input  type="hidden" class="form-control form-control-user" id="longitude"
+                                        placeholder="Email Address" name="longitude" >
                                 </div>
                                  <br><br>
                                     <button type="submit" class="btn btn-primary btn-user btn-block">Buatkan Pesanan</button>
@@ -114,6 +114,8 @@
     <script>
 
 	var map = L.map('map').setView([-7.983908, 112.621391], 13);
+    let latitude = "0";
+    let longitude = "0";
 
     var tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 20,
@@ -131,11 +133,12 @@
             .setLatLng(e.latlng)
             .setContent('Alamat anda :  ' + e.latlng.lat.toString()+" & "+e.latlng.lng.toString())
             .openOn(map);             
-            $dataLat =  e.latlng.lat.toString();
-            $dataLot =  e.latlng.lat.toString();
+            document.getElementById("latitude").value = e.latlng.lat.toString();
+            document.getElementById("longitude").value = e.latlng.lng.toString();
     }
     
-    
+    document.getElementById("latitude").innerHTML = latitude;
+    document.getElementById("longitude").innerHTML = longitude;
     
     map.on('click', onMapClick);
  </script>

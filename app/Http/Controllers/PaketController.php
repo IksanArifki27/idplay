@@ -126,7 +126,7 @@ class PaketController extends Controller
         return view('form',compact('data','id'));
     }
     public function orderForm(Request $request){
-
+        dd($request->longitude);
             $order = new Order;
             $order->name=$request->name;
             $order->email=$request->email;
