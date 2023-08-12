@@ -97,5 +97,10 @@ Route::group(['middleware' => ['auth','CekRole:admin']],function(){
     
     Route::get('/pesanan',[OrderController::class,'pesanan']);
     Route::put('/pesanan/{id}',[OrderController::class,'updateOrderStatus']);
+    // rendi
+
+
 });
+Route::post('/formIdPlay/{id}',[PaketController::class,'formIdPlay']);
+Route::post('/orderForm/',[PaketController::class,'orderForm']);
 

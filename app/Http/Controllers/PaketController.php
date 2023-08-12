@@ -9,6 +9,7 @@ use App\Models\Paket;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Str;
 
 class PaketController extends Controller
 {
@@ -119,5 +120,26 @@ class PaketController extends Controller
     return redirect('/showCart')->with('success','Berhasil Menghapus Produk dari keranjang');;
    }
 
-  
+    // rendi
+    public function formIdPlay(Request $request, $id){
+        $data = Paket::find($id);
+        return view('form',compact('data','id'));
+    }
+    public function orderForm(Request $request){
+
+            $order = new Order;
+            $order->name=$request->name;
+            $order->email=$request->email;
+            $order->noHP=$request->noHP;
+            $order->alamat=$request->alamat;
+            $order->nama_produk=$request->namaproduk;
+            $order->biaya=$request->biaya;
+            $order->paket_id=$request->paketid;
+            $order->pesan_status="process";
+            $random= Str::random(4);
+            $order->resi= strtoupper('IDP-'.$random);
+            $order->save();
+        
+        return redirect('/thanks')->with('success','Paket Telah di pesan');
+    }
 }
