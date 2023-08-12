@@ -25,6 +25,8 @@ return new class extends Migration
             $table->bigInteger('biaya')->nullable();
             $table->integer('paket_id')->nullable();
             $table->string('pesan_status')->nullable();
+            $table->string('lat')->nullable();
+            $table->string('lot')->nullable();
             $table->timestamps();
         });
     }

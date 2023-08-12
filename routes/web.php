@@ -85,6 +85,7 @@ Route::get('/showCart',[PaketController::class,'showCart']);
 Route::get('/orderCash',[OrderController::class,'orderCash']);
 Route::get('/hapusCartItem/{id}',[PaketController::class,'hapusCartItem']);
 Route::post('/add_cart/{id}',[PaketController::class,'addCart']);
+
 Route::get('/thanks',[OrderController::class,'thanks']);
 // Route::get('/cek-resi',[OrderController::class,'cekresi'])->name('search');
 Route::get("/cek-resi", [OrderController::class, 'cekresijson']);
@@ -98,9 +99,10 @@ Route::group(['middleware' => ['auth','CekRole:admin']],function(){
     Route::get('/pesanan',[OrderController::class,'pesanan']);
     Route::put('/pesanan/{id}',[OrderController::class,'updateOrderStatus']);
     // rendi
-
-
+    
+    
 });
 Route::post('/formIdPlay/{id}',[PaketController::class,'formIdPlay']);
 Route::post('/orderForm/',[PaketController::class,'orderForm']);
+Route::get('/maps',[PaketController::class,'maps']);
 

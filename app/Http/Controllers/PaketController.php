@@ -142,4 +142,7 @@ class PaketController extends Controller
         
         return redirect('/thanks')->with('success','Paket Telah di pesan');
     }
+    public function maps(){
+        return view('maps');
+    }
 }
