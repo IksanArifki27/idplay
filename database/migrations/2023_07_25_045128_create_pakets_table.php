@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('kecepatan');
             $table->string('device');
             $table->bigInteger('biaya');
-            $table->string('deskripsi');
+            $table->text('deskripsi');
             $table->string('gambar');
             $table->bigInteger('category_id');
             // $table->enum('kategori',['business','design','development','seo','marketing']);

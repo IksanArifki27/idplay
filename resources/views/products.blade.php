@@ -45,7 +45,7 @@
                     
                     <div class="box-body">
                         <strong> <p>{{$item->nama}}</p></strong>
-                        <p>{{$item->deskripsi}}</p>
+                        <p>{{Str::limit($item->deskripsi, 25, ) }}</p>
                         <section>
                             <p><span>Speed : </span>{{$item->kecepatan}} Mbps </p>
                             <p><span>Device : </span>{{$item->device}} Device</p>

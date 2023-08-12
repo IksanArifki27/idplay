@@ -23,14 +23,14 @@
                         <p>(Per bulan)</p>
                     </div>
                 </header>
-                {{-- <article>
+                <article>
                     <section class="course-intro">
                         <h3>Introduction</h3>
 
                         <p>{{$data->deskripsi}} .</p>
                     </section>
 
-                    <section class="course-objective">
+                    {{-- <section class="course-objective">
                         <h3>Objectives</h3>
                         <p>After this course student will be able to:</p>
                         <ul>
@@ -65,8 +65,8 @@
                             <li>Field Visit and real project demonstration</li>
                             <li>+2 with managem</li>
                         </ul>
-                    </section>
-                </article>					 --}}
+                    </section> --}}
+                </article>					
             </main>
             <aside>
                 {{-- <div class="reserve-course"> --}}

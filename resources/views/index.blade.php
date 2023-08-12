@@ -109,7 +109,7 @@
                     </div>
 
                     <div class="box-wrap" itemprop="event" itemscope itemtype=" http://schema.org/Course">
-                        <div class="img-wrap"  itemprop="image"><img src="images/course-pic.png" alt="courses picture"></div>
+                        <div class="img-wrap"  itemprop="image"><img src="images/home-package.png" alt="courses picture"></div>
                             <a href="/products" class="learn-desining-banner" itemprop="name">DEDICATED</a>
                         <div class="box-body" itemprop="description">
                             <p><b>Menghadirkan layanan terbaik dengan layanan dan kecepatan premium. 

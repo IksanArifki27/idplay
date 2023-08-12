@@ -31,22 +31,10 @@
                         {{-- <li><a href="/about">About</a></li> --}}
                         <li> <a href="#cekresiIDP">Cek Resi</a> </li>
                         <li><a href="/contact">Contact</a></li>
-                        <li><a href="/showCart">Cart</a></li>
+                        <li><a href="/showCart">Cart</a></li>                       
+                        <li><a href="/login">Login</a></li>
                         
-                        @if (Route::has('login'))
-                            @auth
-                            <li class="menu-parent">
-                                <a href="#">{{ auth()->user()->username}} </a>
-                                <ul class="sub-menu">
-                                    <li><a href="/logout">Logout</a> </li>
-                                </ul>
-                            </li>
-                            
-                            @else
-                            <li><a href="/login">Login</a></li>
-                        
-                        @endauth
-                        @endif
+                      
                         
                         
                     </ul>

@@ -74,17 +74,18 @@ class PaketController extends Controller
     }
 
     public function addCart(Request $request, $id){
-        if (Auth::id()) {
+        $id_cus = 1;
+        // if (Auth::id()) {
             // return redirect('/products');
-            $user = Auth::user();
+            // $user = Auth::user();
             $paket = Paket::find($id);
             $cart = new Cart;
-
-            $cart->name=$user->username;
-            $cart->email=$user->email;
-            $cart->alamat=$user->alamat;
-            $cart->user_id=$user->id;
-            $cart->noHP=$user->noHP;
+        
+            // $cart->name=$user->username;
+            // $cart->email=$user->email;
+            // $cart->alamat=$user->alamat;
+            // $cart->user_id=$user->id;
+            // $cart->noHP=$user->noHP;
             $cart->nama_produk=$paket->nama;
             $cart->biaya=$paket->biaya;
             $cart->kecepatan=$paket->kecepatan;
@@ -93,22 +94,23 @@ class PaketController extends Controller
             $cart->save();
          return redirect('/showCart')->with('success','Produk Berhasil ditambah ke keranjang');
             
-        }else{
-            return redirect('/login');
-        }
+        // }else{
+        //     return redirect('/login');
+        // }
         
         
     }
    
     public function showCart(){
-        if (Auth::id()) {
-            # code...
-            $id = Auth::user()->id;
-            $carts = Cart::where('user_id',$id)->get();
+        // if (Auth::id()) {
+        //     # code...
+        //     $id = Auth::user()->id;
+           
+            $carts = Cart::all();
             return view('layouts.cartProduk',compact('carts'));
-        }else{
-            return redirect('/login');
-        }
+        // }else{
+        //     return redirect('/login');
+        // }
     }
    
    public function hapusCartItem ($id){

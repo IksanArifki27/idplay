@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Cart;
 use App\Models\Order;
+use App\Models\Paket;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
@@ -13,18 +14,18 @@ class OrderController extends Controller
 {
     //
     public function orderCash(){
-        $user = Auth::user();
-        $id = $user->id;
-        $datas = Cart::where('user_id',$id)->get();
+        // $user = Auth::user();
+        // $id = $user->id;
+        $datas = Cart::all();
         
         foreach ($datas as $data) {
             $order = new Order;
-            $order->name=$data->name;
-            $order->email=$data->email;
-            $order->noHP=$data->noHP;
-            $order->alamat=$data->alamat;
-            $order->alamat=$data->alamat;
-            $order->user_id=$data->user_id;
+            // $order->name=$data->name;
+            // $order->email=$data->email;
+            // $order->noHP=$data->noHP;
+            // $order->alamat=$data->alamat;
+            // $order->alamat=$data->alamat;
+            // $order->user_id=$data->user_id;
             $order->nama_produk=$data->nama_produk;
             $order->biaya=$data->biaya;
             $order->paket_id=$data->paket_id;
@@ -69,6 +70,7 @@ class OrderController extends Controller
    }
    public function thanks(){
     $userId = Auth::user()->id;
+    // $paketid = Paket::find($id)->;
     $orders = Order::where('user_id',$userId)->get();
    
     return view('thanks',compact('orders'));
