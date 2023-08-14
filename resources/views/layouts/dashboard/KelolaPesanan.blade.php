@@ -68,6 +68,7 @@
                                             <th>Harga</th>
                                             <th>Status</th>
                                             <th>Aksi</th>
+                                            <th>Cetak</th>
                                            
                                         </tr>
                                     </thead>
@@ -102,6 +103,10 @@
                                                     <button type="submit" class="btn btn-primary ">update status</button>
                                                 </div>
                                                </form>
+                                            </td>
+                                            <td>
+
+                                                <a href="/eskportPDF/{{$data->id}}" class="btn btn-danger">PDF</a>
                                             </td>
                                         </tr>
                                         @endforeach

@@ -13,7 +13,7 @@ class DashboardController extends Controller
     //
 
     public function index(){
-        $pelanggan = User::where('role','user') ->count();
+        $pelanggan = User::where('role','admin') ->count();
         $kategori = Category::all()->count();
         $produk = Paket::all()->count();
         $pesanan = Order::all()->count();

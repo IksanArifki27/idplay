@@ -105,4 +105,6 @@ Route::group(['middleware' => ['auth','CekRole:admin']],function(){
 Route::post('/formIdPlay/{id}',[PaketController::class,'formIdPlay']);
 Route::post('/orderForm/',[PaketController::class,'orderForm']);
 Route::get('/maps',[PaketController::class,'maps']);
+Route::get('/eskportPDF/{id}',[PaketController::class,'eskportPDF']);
+
 

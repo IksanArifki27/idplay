@@ -52,7 +52,7 @@
                                 <h1 class="h4 text-gray-900 mb-4">Pesan produk</h1>
                             </div>
                             <!-- ubah sini -->
-                            <form class="user" method="POST" action="/orderForm">
+                            <form class="user" method="POST" action="/orderForm" enctype="multipart/form-data">
                                 @csrf
                                 <!-- nama -->
                                 <div class="form-group">
@@ -68,6 +68,23 @@
                                 <div class="form-group">
                                     <input type="text" class="form-control form-control-user" id="exampleInputEmail"
                                         placeholder="Masukan Alamat" name="alamat">
+                                </div>
+                                {{-- NIK --}}
+                                 <div class="form-group">
+                                    <input  type="number" class="form-control form-control-user" id="exampleInputEmail"
+                                        placeholder="NIK" name="NIK" >
+                                </div>
+                                {{-- ft ktp --}}
+                                <p>foto ktp</p>
+                                <div class="form-group">
+                                    <input  type="file" class="form-control" id="exampleInputEmail"
+                                        placeholder="Selfie " name="fotoKTP" >
+                                </div>
+                                {{--  ft selfie--}}
+                                <p>foto selfie</p>
+                                <div class="form-group">
+                                    <input  type="file" class="form-control " id="exampleInputEmail"
+                                        placeholder="Selfie Address" name="selfie" >
                                 </div>
                                 <!-- email -->
                                 <div class="form-group">
@@ -86,17 +103,20 @@
                                 </div>
                                 <!-- nama produk -->
                                 <div class="form-group">
-                                    <input  type="text" class="form-control form-control-user" id="exampleInputEmail"
+                                    <input  type="hidden" class="form-control form-control-user" id="exampleInputEmail"
                                         placeholder="Email Address" name="paketid" value="{{$id}}">
                                 </div>
+                               
+                                
                                  <div id="map"></div> 
+                                 <br>
                                   <div class="form-group">
-                                    <input  type="hidden" class="form-control form-control-user" id="latitude"
-                                        placeholder="Email Address" name="latitude">
+                                    <input  type="text" class="form-control form-control-user" id="latitude"
+                                        placeholder="latitude" name="lat" >
                                 </div>
                                  <div class="form-group">
-                                    <input  type="hidden" class="form-control form-control-user" id="longitude"
-                                        placeholder="Email Address" name="longitude" >
+                                    <input  type="text" class="form-control form-control-user" id="longitude"
+                                        placeholder="longitude" name="lot" >
                                 </div>
                                  <br><br>
                                     <button type="submit" class="btn btn-primary btn-user btn-block">Buatkan Pesanan</button>

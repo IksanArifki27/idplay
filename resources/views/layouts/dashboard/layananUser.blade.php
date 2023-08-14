@@ -49,7 +49,7 @@
                              </div>     
                             @endif
  
-                            <a href="/showCart" class="btn btn-primary"> <i class="fa fa-shopping-cart" ></i>Keranjang </a>
+                            {{-- <a href="/showCart" class="btn btn-primary"> <i class="fa fa-shopping-cart" ></i>Keranjang </a> --}}
                                
                                 </div>
                     <hr style="height:2px;border-width:0;color:rgb(0, 0, 0);background-color:rgb(38, 44, 156)" >
@@ -76,11 +76,11 @@
                                                 <p><span>Fee:</span> @money($item->biaya) <i class="fas fa-money-check-alt"></i> </p>
                                             </section>
                                         <p>{{ Str::limit($item->deskripsi, 100) }}</p>
-
+{{-- 
                                         <form action="/add_cart/{{$item->id}}" method="POST">
                                             @csrf
                                             <button type="submit" class="btn btn-success">Tambah Ke Keranjang >>></button>
-                                        </form>
+                                        </form> --}}
 
                                         
                                     </div>

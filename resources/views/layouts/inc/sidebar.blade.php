@@ -53,7 +53,7 @@
              <li class="nav-item">
                 <a class="nav-link" href="/KelolaUser">
                     <i class="fa fa-users" ></i>
-                    <span>Data Pelanggan</span></a>
+                    <span>Data Admin</span></a>
             </li>
                         @endif
              <li class="nav-item">
@@ -61,12 +61,12 @@
                     <i class="fas fa-fw fa-cog" ></i>
                     <span>Layanan Produk</span></a>
             </li>
-             <li class="nav-item">
+             {{-- <li class="nav-item">
                 <a class="nav-link" href="/PesananUser">
                     <i class="fa fa-user" aria-hidden="true"></i>
                     <span>Pesanan Saya</span></a>
             </li>
-            
+             --}}
             {{-- <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">

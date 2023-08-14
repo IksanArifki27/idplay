@@ -7,6 +7,8 @@ use App\Models\Category;
 use App\Models\Order;
 use App\Models\Paket;
 use Illuminate\Http\Request;
+use Barryvdh\DomPDF\Facade\Pdf;
+
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Str;
@@ -126,14 +128,27 @@ class PaketController extends Controller
         return view('form',compact('data','id'));
     }
     public function orderForm(Request $request){
-        dd($request->longitude);
+        // dd($request->longitude);
             $order = new Order;
+            if ($request->hasFile('fotoKTP')) {
+                $request->file('fotoKTP')->move('fotoKTP/', $request->file('fotoKTP')->getClientOriginalName());
+                $order->fotoKTP = $request->file('fotoKTP')->getClientOriginalName();
+                $order->save();
+            }
+            if ($request->hasFile('selfie')) {
+                $request->file('selfie')->move('fotoSelfie/', $request->file('selfie')->getClientOriginalName());
+                $order->fotoKTP = $request->file('selfie')->getClientOriginalName();
+                $order->save();
+            }
             $order->name=$request->name;
             $order->email=$request->email;
             $order->noHP=$request->noHP;
             $order->alamat=$request->alamat;
             $order->nama_produk=$request->namaproduk;
             $order->biaya=$request->biaya;
+            $order->lat=$request->lat;
+            $order->NIK=$request->NIK;
+            $order->lot=$request->lot;
             $order->paket_id=$request->paketid;
             $order->pesan_status="process";
             $random= Str::random(4);
@@ -144,5 +159,13 @@ class PaketController extends Controller
     }
     public function maps(){
         return view('maps');
+    }
+    public function eskportPDF($id){
+        $data = Order::find($id);
+        $pdf = pdf::loadview('FormulirPDF',compact('data'));
+        $pdf->set_option('isRemoteEnabled',TRUE);
+        return $pdf->stream('Data-Pelanggan.pdf');
+    //  $pdf = Pdf::loadView('pdf.invoice', $data);
+    // return $pdf->download('invoice.pdf');
     }
 }
