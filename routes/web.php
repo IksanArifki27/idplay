@@ -86,7 +86,7 @@ Route::get('/orderCash',[OrderController::class,'orderCash']);
 Route::get('/hapusCartItem/{id}',[PaketController::class,'hapusCartItem']);
 Route::post('/add_cart/{id}',[PaketController::class,'addCart']);
 
-Route::get('/thanks',[OrderController::class,'thanks']);
+Route::get('/thanks/{id}',[OrderController::class,'thanks']);
 // Route::get('/cek-resi',[OrderController::class,'cekresi'])->name('search');
 Route::get("/cek-resi", [OrderController::class, 'cekresijson']);
 

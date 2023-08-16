@@ -12,7 +12,7 @@
                     <div class="card-detail">
 
                         @foreach ($orders as $item)
-                        <h2>Nama = {{$item->nama_produk}}</h2>
+                        <h2>Nama = {{$item->name}}</h2>
                         <h2>ID Pelanggan =  {{$item->resi}}</h2>
                         @endforeach
                     </div>

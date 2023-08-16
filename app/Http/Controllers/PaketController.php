@@ -154,8 +154,9 @@ class PaketController extends Controller
             $random= Str::random(4);
             $order->resi= strtoupper('IDP-'.$random);
             $order->save();
+            $order->id;
         
-        return redirect('/thanks')->with('success','Paket Telah di pesan');
+        return redirect("/thanks/{$order->id}")->with('success','Paket Telah di pesan');
     }
     public function maps(){
         return view('maps');

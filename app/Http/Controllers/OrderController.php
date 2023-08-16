@@ -68,11 +68,10 @@ class OrderController extends Controller
     $datas = Order::where('id',$id);
     dd($datas);
    }
-   public function thanks(){
-    $userId = Auth::user()->id;
-    $orders = Order::where('user_id',$userId)->get();
+   public function thanks($id){
+    // $userId = Auth::user()->id;
+    $orders = Order::where('id',$id)->get();
     // $customerID = Order::find()
-   
     return view('thanks',compact('orders'));
    }
 
