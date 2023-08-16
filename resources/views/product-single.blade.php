@@ -81,7 +81,7 @@
                     </form> --}}
                 {{-- </div> --}}
                 <br><br><br><br><br>
-                <form action="/orderForm/{{$data->id}}" method="post">
+                <form action="/formIdPlay/{{$data->id}}" method="post">
                         @csrf
                          <button type="submit" style="background-color: rgb(245, 186, 76); color:white; padding:20px 30px;font-size:28px; font-weight:500;margin:100px; border-radius:5px;" >Beli</button>
                     </form>

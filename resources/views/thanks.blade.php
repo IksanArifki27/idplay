@@ -7,7 +7,7 @@
                  <a href="/" class="btn-checkout">Kembali</a>
                 <img class="img-logo" src="images/idplay.png" width="300" alt="">
                 <div class="card">
-                    <h1 class="text-thanks">Terimakasih Telah Berbelanjan Produk Kami</h1>
+                    <h1 class="text-thanks">Terimakasih Telah Memesan Produk Kami</h1>
                     <hr>
                     <div class="card-detail">
 
