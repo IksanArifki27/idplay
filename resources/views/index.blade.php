@@ -178,7 +178,7 @@
     {{-- cek resi --}}
     <div class="page-heading" id="cekresiIDP">
         <div class="container">
-            <h2>Cek Resi</h2>
+            <h2>CEK ID PELANGGAN</h2>
         </div>
     </div>
     <section class="cek-resi">
@@ -186,7 +186,7 @@
            <div class="resi">
                 <input type="text" id="cekresi" class="inputresi" placeholder="IDP-XXXX">
                 <br>
-                <button type="button" class="btnresi" id="btnresi">Cek Resi</button>
+                <button type="button" class="btnresi" id="btnresi">Cek ID Pelanggan</button>
             </div>
         </div>
         <br><br>

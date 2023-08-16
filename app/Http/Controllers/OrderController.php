@@ -70,8 +70,8 @@ class OrderController extends Controller
    }
    public function thanks(){
     $userId = Auth::user()->id;
-    // $paketid = Paket::find($id)->;
     $orders = Order::where('user_id',$userId)->get();
+    // $customerID = Order::find()
    
     return view('thanks',compact('orders'));
    }

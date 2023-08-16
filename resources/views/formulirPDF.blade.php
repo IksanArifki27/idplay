@@ -10,42 +10,43 @@
     <div class="container">
     <div class="header">
         <div class="cp">
-            <p class="tcp">08122121</p>
-            <p class="tcp">idplay@gmail.com</p>
+            <p class="tcp">081333370841</p>
+            <p class="tcp">idplayjomabng@gmail.com</p>
            
         </div>
         <div class="logo">
           <img src="images/idplay.png" alt="Logo Perusahaan" />
         </div>
         <div class="company-info">
-          <p>Ruko patimura Squre</p>
-          <p>Jl Patimura No.13, segon</p>
+          <p>Ruko Patimura Squre</p>
+          <p>Jl Patimura No.13a, segon</p>
           <p>Kec. Jombang. Kab Jombang</p>
-          <p>jawa Timur 6185</p>
+          <p>jawa Timur 61418</p>
         </div>
         
     </div>
 
       <h2 class="title">FORMULIR BERLANGGANAN</h2>
-      <p>Tanggal :{{$data->created_at->format('d-M-Y')}} </p>
+      <p>Tanggal :{{$data->created_at->format('d/m/Y')}} </p>
       <div class="wrap">
         <h2 class="title-pelanggan">Data Pelanggan</h2>
       </div>
 
-      <p>Nama Pelanggan  <span> :</span> <strong> {{$data->name}} </strong> </p>
+      <p>Nama Pelanggan  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: <strong> {{$data->name}} </strong> </p>
       <hr />
       <p>Alamat Pemasanagan :<strong> {{$data->alamat}} </strong></p>
       <hr />
-      <p>Telepon :<strong> {{$data->noHP}} </strong> </p>
+      <p>Telepon &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:<strong> {{$data->noHP}} </strong> </p>
       <hr />
-      <p>No Identitas (KTP) : <strong> {{$data->NIK}} </strong></p>
+      <p>No Identitas (KTP) &nbsp; &nbsp; &nbsp;  : <strong> {{$data->NIK}} </strong></p>
       <hr />
-      <p>Email : <strong> {{$data->email}} </strong></p>
+      <p>Email &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; : <strong> {{$data->email}} </strong></p>
       <hr />
-      <p>Titik Kordinat (lat/lon) : <strong> {{$data->lat}}/<strong> {{$data->lot}} </strong> </strong></p>
+      <p>Titik Kordinat (lat/lon) :  &nbsp;Latitude : <strong> {{$data->lat}}</strong></p>
       <hr />
-
-      <!-- Isi surat perjanjian di sini -->
+      <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; Longitude : <strong> {{$data->lot}} </strong></p>
+      <hr>
+    
     </div>
   </body>
 </html>

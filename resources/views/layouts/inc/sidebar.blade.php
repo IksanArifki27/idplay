@@ -56,11 +56,11 @@
                     <span>Data Admin</span></a>
             </li>
                         @endif
-             <li class="nav-item">
+             {{-- <li class="nav-item">
                 <a class="nav-link" href="/layananUser">
                     <i class="fas fa-fw fa-cog" ></i>
                     <span>Layanan Produk</span></a>
-            </li>
+            </li> --}}
              {{-- <li class="nav-item">
                 <a class="nav-link" href="/PesananUser">
                     <i class="fa fa-user" aria-hidden="true"></i>

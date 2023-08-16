@@ -61,7 +61,7 @@
                                             <th>Nama Pemesan</th>
                                             <th>Tgl Pesan</th>
                                             <th>Email</th>
-                                            <th>NO RESI</th>
+                                            <th>ID Pelanggan</th>
                                             <th>No Hp</th>
                                             {{-- <th>alamat</th> --}}
                                             <th>Nama Produk</th>

@@ -29,9 +29,9 @@
                             </ul>
                         </li> --}}
                         {{-- <li><a href="/about">About</a></li> --}}
-                        <li> <a href="#cekresiIDP">Cek Resi</a> </li>
+                        <li> <a href="#cekresiIDP">Cek ID Pelanggan</a> </li>
                         <li><a href="/contact">Contact</a></li>
-                        <li><a href="/showCart">Cart</a></li>                       
+                        {{-- <li><a href="/showCart">Cart</a></li>                        --}}
                         <li><a href="/login">Login</a></li>
                         
                       
