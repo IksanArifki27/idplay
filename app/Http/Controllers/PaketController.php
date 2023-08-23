@@ -137,7 +137,7 @@ class PaketController extends Controller
             }
             if ($request->hasFile('selfie')) {
                 $request->file('selfie')->move('fotoSelfie/', $request->file('selfie')->getClientOriginalName());
-                $order->fotoKTP = $request->file('selfie')->getClientOriginalName();
+                $order->selfie = $request->file('selfie')->getClientOriginalName();
                 $order->save();
             }
             $order->name=$request->name;

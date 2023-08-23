@@ -57,28 +57,33 @@
                                 <!-- nama -->
                                 <div class="form-group">
                                     <input type="text" class="form-control form-control-user" id="exampleInputEmail"
-                                        placeholder="Masukan Nama" name="name">
+                                        placeholder="Masukan Nama" name="name" required>
                                 </div>
                                 <!-- no hp -->
                                 <div class="form-group">
                                     <input type="number" class="form-control form-control-user" id="exampleInputEmail"
-                                        placeholder="Masukan No tlpn" name="noHP">
+                                        placeholder="Masukan No tlpn" name="noHP" required>
                                 </div>
                                 <!-- alamat -->
                                 <div class="form-group">
                                     <input type="text" class="form-control form-control-user" id="exampleInputEmail"
-                                        placeholder="Masukan Alamat" name="alamat">
+                                        placeholder="Masukan Alamat" name="alamat" required>
                                 </div>
                                 {{-- NIK --}}
                                  <div class="form-group">
                                     <input  type="number" class="form-control form-control-user" id="exampleInputEmail"
-                                        placeholder="NIK" name="NIK" >
+                                        placeholder="NIK" name="NIK" required>
+                                </div>
+                                <!-- email -->
+                                <div class="form-group">
+                                    <input type="email" class="form-control form-control-user" id="exampleInputEmail"
+                                        placeholder="Email Address" name="email" required>
                                 </div>
                                 {{-- ft ktp --}}
                                 <p>foto ktp</p>
                                 <div class="form-group">
                                     <input  type="file" class="form-control" id="exampleInputEmail"
-                                        placeholder="Selfie " name="fotoKTP" >
+                                        placeholder="Selfie " name="fotoKTP" required>
                                 </div>
                                 {{--  ft selfie--}}
                                 <p>foto selfie</p>
@@ -86,11 +91,7 @@
                                     <input  type="file" class="form-control " id="exampleInputEmail"
                                         placeholder="Selfie Address" name="selfie" >
                                 </div>
-                                <!-- email -->
-                                <div class="form-group">
-                                    <input type="email" class="form-control form-control-user" id="exampleInputEmail"
-                                        placeholder="Email Address" name="email">
-                                </div>
+                                
                                 <!-- nama produk -->
                                 <div class="form-group">
                                     <input  type="text" class="form-control form-control-user" id="exampleInputEmail"
