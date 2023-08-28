@@ -197,52 +197,7 @@
     </section>
     <br><br>
     {{-- end cek resi --}}
-    <section class="page-heading">
-        <div class="container">
-            <h2>latest news</h2>
-        </div>
-    </section>
-    <section class="latest-news">
-        <div class="container" itemprop="event" itemscope itemtype=" http://schema.org/Event">
-            <div class="owl-two owl-carousel">
-                <div class="news-wrap" itemprop="event">
-                    <div class="news-img-wrap" itemprop="image">
-                        <img src="images/latest-new-img.jpg" alt="Latest News Images">
-                    </div>
-                    <div class="news-detail" itemprop="description">
-                        <a href=""><h1>Langganan 1 Bulan + Bonus</h1></a>
-                        <h2 itemprop="startDate">By Admin | 15 Juli 2023</h2>
-
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod laborum eius tenetur saepe odit aliquam a reprehenderit aliquid.</p>
-                    </div>
-                </div>
-
-                <div class="news-wrap" itemprop="event">
-                    <div class="news-img-wrap" itemprop="image">
-                        <img src="images/latest-new-img.jpg" alt="Latest News Images">
-                    </div>
-                    <div class="news-detail" itemprop="description">
-                        <a href=""><h1>Dapatkan koneksi otomatis di seluruh Indonesia</h1></a>
-                        <h2 itemprop="startDate">By Admin | 20 Juli 2023</h2>
-
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore quisquam sunt voluptas et aliquam ducimus non?</p>
-                    </div>
-                </div>
-
-                <div class="news-wrap" itemprop="event">
-                    <div class="news-img-wrap" itemprop="image">
-                        <img src="images/latest-new-img.jpg" alt="Latest News Images">
-                    </div>
-                    <div class="news-detail" itemprop="description">
-                        <a href=""><h1>Orientation Programme for new Students.</h1></a>
-                        <h2 itemprop="startDate">By Admin | 20 Dec. 2018</h2>
-
-                        <p>Orientation Programme for new sffs Students. Orientatin Programmes for new Students.. Orientatin Programmes for new Students</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+   
     <!-- Latest News CLosed -->
     {{-- about us --}}
     <div class="page-heading">

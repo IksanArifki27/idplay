@@ -22,8 +22,8 @@
     <link href="{{asset('Admin/css/sb-admin-2.min.css')}}" rel="stylesheet">
 
 </head>
-
-<body class="bg-gradient-primary">
+    {{-- class="bg-gradient-primary" --}}
+<body  style="background-color: #241468">
 
     <div class="container">
 
@@ -71,7 +71,7 @@
                                     <hr>
                                     
                                     <div class="text-center">
-                                        <a class="small" href="/register">Membuat Akun Baru</a>
+                                        {{-- <a class="small" href="/register">Membuat Akun Baru</a> --}}
                                         <br>
                                         <a class="small" href="/">Home</a>
                                     </div>

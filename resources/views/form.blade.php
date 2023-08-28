@@ -27,8 +27,8 @@
     <link href="{{asset('Admin/css/sb-admin-2.min.css')}}" rel="stylesheet">
 
 </head>
-
-<body class="bg-gradient-primary">
+{{-- class="bg-gradient-primary" --}}
+<body  style="background-color: #241468">
 
     <div class="container">
 
@@ -43,8 +43,8 @@
                 <!-- Nested Row within Card Body -->
                 <div class="row">
                     <div class="col-lg-5 d-none d-lg-block">
-                        <br><br><br><br><br>
-                        <img src="images/idplay.png" width="450" alt="" class="mt-5 align-item-center" >
+                        <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> 
+                        <img src="{{asset('images/idplay.png')}}" width="450" alt="" class="mt-5 align-item-center" >
                     </div>
                     <div class="col-lg-7">
                         <div class="p-5">
